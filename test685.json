@@ -1,0 +1,2742 @@
+{
+    "CVE-2018-20457": {
+        "software": "radare2",
+        "patch": "e5c14c167b0dcf0a53d76bd50bacbbcc0dfc1ae7"
+    },
+    "CVE-2018-6560": {
+        "software": "flatpak",
+        "patch": "52346bf187b5a7f1c0fe9075b328b7ad6abe78f6"
+    },
+    "CVE-2016-2499": {
+        "software": "av",
+        "patch": "9c67287c64a8535b86aa4a46ca4fdbc9859b40b5"
+    },
+    "CVE-2015-2696": {
+        "software": "krb5",
+        "patch": "e04f0283516e80d2f93366e0d479d13c9b5c8c2a"
+    },
+    "CVE-2017-8063": {
+        "software": "linux",
+        "patch": "3f190e3aec212fc8c61e202c51400afa7384d4bc"
+    },
+    "CVE-2018-10205": {
+        "software": "hyperstart",
+        "patch": "bde26da80122117cce5cea65e1d51129fc5a7e3c"
+    },
+    "CVE-2020-12279": {
+        "software": "libgit2",
+        "patch": "64c612cc3e25eff5fb02c59ef5a66ba7a14751e4"
+    },
+    "CVE-2018-10017": {
+        "software": "openmpt",
+        "patch": "7ebf02af2e90f03e0dbd0e18b8b3164f372fb97c"
+    },
+    "CVE-2020-6611": {
+        "software": "libredwg",
+        "patch": "540e1e432f3a48e7c1048a87da32640a5ac15007"
+    },
+    "CVE-2019-9749": {
+        "software": "fluent-bit",
+        "patch": "2525369e81d1ad0b0b2d713ffcc1b65e4e7faad3"
+    },
+    "CVE-2017-15218": {
+        "software": "ImageMagick",
+        "patch": "6387479aa974709d5c329c8efbde38175f386844"
+    },
+    "CVE-2018-12578": {
+        "software": "sam2p",
+        "patch": "22e7a17e70e5f5eedf466b0b1855c8c954061a51"
+    },
+    "CVE-2017-5836": {
+        "software": "libplist",
+        "patch": "7a28a14cf6ed547dfd2e52a4db17f47242bfdef9"
+    },
+    "CVE-2019-19778": {
+        "software": "libsixel",
+        "patch": "614e76133d5832255c6a7091d042354acf6f3aa6"
+    },
+    "CVE-2020-0157": {
+        "software": "nfc",
+        "patch": "c3a2dab1a0153de251fb7142dda227dab01ab12b"
+    },
+    "CVE-2017-16830": {
+        "software": "binutils-gdb",
+        "patch": "6ab2c4ed51f9c4243691755e1b1d2149c6a426f4"
+    },
+    "CVE-2019-18798": {
+        "software": "libsass",
+        "patch": "0b721e0f37fc69ab197ec956a923e036e3b05ca6"
+    },
+    "CVE-2019-19647": {
+        "software": "radare2",
+        "patch": "07b5e062f2d4a00403ff031302cb18dfa58e3805"
+    },
+    "CVE-2019-15134": {
+        "software": "RIOT",
+        "patch": "c6df2064aff1ffb4015d4cedbaefb8850cb50aa8"
+    },
+    "CVE-2017-15281": {
+        "software": "ImageMagick",
+        "patch": "32cbfceeee57962321b2ead627129c9d9ffbfcdb"
+    },
+    "CVE-2018-18023": {
+        "software": "ImageMagick",
+        "patch": "5d71e23b853461dd3628cd1218834fcf13938365"
+    },
+    "CVE-2017-9744": {
+        "software": "binutils-gdb",
+        "patch": "f461bbd847f15657f3dd2f317c30c75a7520da1f"
+    },
+    "CVE-2016-6905": {
+        "software": "libgd",
+        "patch": "3c2b605d72e8b080dace1d98a6e50b46c1d12186"
+    },
+    "CVE-2018-11593": {
+        "software": "Espruino",
+        "patch": "bed844f109b6c222816740555068de2e101e8018"
+    },
+    "CVE-2017-9616": {
+        "software": "wireshark",
+        "patch": "2113179835b37549f245ac7c05ff2b96276893e4"
+    },
+    "CVE-2018-14524": {
+        "software": "libredwg",
+        "patch": "9a8b9fb49108bab5d12f3353292f8fd8ea12898f"
+    },
+    "CVE-2015-0240": {
+        "software": "samba",
+        "patch": "28f10a89e6e9d605ba299b83f7244e8c11ddbc6e"
+    },
+    "CVE-2018-20579": {
+        "software": "contiki-ng",
+        "patch": "42436cc486a254a86118e419168bdd5e39c0da6b"
+    },
+    "CVE-2017-1000172": {
+        "software": "gravity",
+        "patch": "5b73d291c6969696947d2f264c6f935b8d78e0a8"
+    },
+    "CVE-2019-13107": {
+        "software": "matio",
+        "patch": "3aa96c28af1d2280656639d0dbb0630c3788ed96"
+    },
+    "CVE-2017-14641": {
+        "software": "Bento4",
+        "patch": "41cad602709436628f07b4c4f64e9ff7a611f687"
+    },
+    "CVE-2018-9585": {
+        "software": "nfc",
+        "patch": "259965c1707581547ae014a169c51ae23e8e4358"
+    },
+    "CVE-2018-10529": {
+        "software": "LibRaw",
+        "patch": "71071be25f6456c87ec75b7aeca911585e34e7c9"
+    },
+    "CVE-2017-13725": {
+        "software": "tcpdump",
+        "patch": "3c4d7c0ee30a30e5abff3d6d9586a3753101faf5"
+    },
+    "CVE-2016-7538": {
+        "software": "ImageMagick",
+        "patch": "82e2049862a8b8a999e160734ad64fb6cc3b145f"
+    },
+    "CVE-2017-12762": {
+        "software": "linux",
+        "patch": "9f5af546e6acc30f075828cb58c7f09665033967"
+    },
+    "CVE-2015-8724": {
+        "software": "wireshark",
+        "patch": "83f2818118ae255db949bb3a4b3a26ebd1c5f7c5"
+    },
+    "CVE-2018-14423": {
+        "software": "openjpeg",
+        "patch": "bd88611ed9ad7144ec4f3de54790cd848175891b"
+    },
+    "CVE-2016-4483": {
+        "software": "libxml2",
+        "patch": "c97750d11bb8b6f3303e7131fe526a61ac65bcfd"
+    },
+    "CVE-2016-10229": {
+        "software": "linux",
+        "patch": "197c949e7798fbf28cfadc69d9ca0c2abbf93191"
+    },
+    "CVE-2018-7751": {
+        "software": "ffmpeg",
+        "patch": "a6cba062051f345e8ebfdff34aba071ed73d923f"
+    },
+    "CVE-2016-6164": {
+        "software": "ffmpeg",
+        "patch": "8a3221cc67a516dfc1700bdae3566ec52c7ee823"
+    },
+    "CVE-2018-8960": {
+        "software": "ImageMagick",
+        "patch": "23f6beef78cfe806cabc090a015e73557d60788e"
+    },
+    "CVE-2017-7299": {
+        "software": "binutils-gdb",
+        "patch": "d7f399a8de4c55eb841db6493597a587fac002de"
+    },
+    "CVE-2017-8807": {
+        "software": "varnish-cache",
+        "patch": "176f8a075a963ffbfa56f1c460c15f6a1a6af5a7"
+    },
+    "CVE-2019-8377": {
+        "software": "tcpreplay",
+        "patch": "5d6f191d35dbc3b4be60abdf1c05fe8f8cf515bd"
+    },
+    "CVE-2017-5974": {
+        "software": "zziplib",
+        "patch": "9e8f867a976311a3e5fb0184c947e22ec35f2fcb"
+    },
+    "CVE-2017-15127": {
+        "software": "linux",
+        "patch": "5af10dfd0afc559bb4b0f7e3e8227a1578333995"
+    },
+    "CVE-2018-8804": {
+        "software": "ImageMagick",
+        "patch": "f55d3a622d234e940fb99325b92c6d3df578fa9b"
+    },
+    "CVE-2019-15651": {
+        "software": "wolfssl",
+        "patch": "c6e4aebcdff4e774c94953ffe9de7ce287c54f4f"
+    },
+    "CVE-2016-7970": {
+        "software": "libass",
+        "patch": "08e754612019ed84d1db0d1fc4f5798248decd75"
+    },
+    "CVE-2015-3218": {
+        "software": "polkit",
+        "patch": "48e646918efb2bf0b3b505747655726d7869f31c"
+    },
+    "CVE-2015-8875": {
+        "software": "gdk-pixbuf",
+        "patch": "dbfe8f70471864818bf458a39c8a99640895bd22"
+    },
+    "CVE-2018-12599": {
+        "software": "ImageMagick",
+        "patch": "ae04fa4be910255e5d363edebd77adeee99a525d"
+    },
+    "CVE-2018-16890": {
+        "software": "curl",
+        "patch": "b780b30d1377adb10bbe774835f49e9b237fb9bb"
+    },
+    "CVE-2017-11434": {
+        "software": "qemu",
+        "patch": "413d463f43fbc4dd3a601e80a5724aa384a265a0"
+    },
+    "CVE-2018-14434": {
+        "software": "ImageMagick",
+        "patch": "98a2cceae0dceccbfe54051167c2c80be1f13c3f"
+    },
+    "CVE-2018-7725": {
+        "software": "zziplib",
+        "patch": "1ba660b3300d67b8ce9f6b96bbae0b36fa2d6b06"
+    },
+    "CVE-2017-6852": {
+        "software": "jasper",
+        "patch": "a10536d5f7f3164b0a1f1ae3e533f4a12ca6f543"
+    },
+    "CVE-2019-11024": {
+        "software": "libsixel",
+        "patch": "b418f351f348d8273282f3fec6425b6b4e1d91da"
+    },
+    "CVE-2017-13027": {
+        "software": "tcpdump",
+        "patch": "a77ff09c46560bc895dea11dc9fe643486b056ac"
+    },
+    "CVE-2019-11579": {
+        "software": "dhcpcd",
+        "patch": "4b67f6f1038fd4ad5ca7734eaaeba1b2ec4816b8"
+    },
+    "CVE-2017-6886": {
+        "software": "LibRaw",
+        "patch": "34373ae39d49494ebe0d4a9dfc3116da3ab1f19c"
+    },
+    "CVE-2015-8736": {
+        "software": "wireshark",
+        "patch": "baa3eab78b422616a92ee38551c1b1510dca4ccb"
+    },
+    "CVE-2018-11359": {
+        "software": "wireshark",
+        "patch": "beaebe91b14564fb9f86f0726bab09927872721b"
+    },
+    "CVE-2018-19052": {
+        "software": "lighttpd1.4",
+        "patch": "2105dae0f9d7a964375ce681e53cb165375f84c1"
+    },
+    "CVE-2018-10114": {
+        "software": "gegl",
+        "patch": "c83b05d565a1e3392c9606a4ecaa560eb9a4ee29"
+    },
+    "CVE-2019-18799": {
+        "software": "libsass",
+        "patch": "994695c669085058c4a500f295a0531893eff77a"
+    },
+    "CVE-2015-3829": {
+        "software": "av",
+        "patch": "2674a7218eaa3c87f2ee26d26da5b9170e10f859"
+    },
+    "CVE-2020-14402": {
+        "software": "libvncserver",
+        "patch": "74e8a70f2c9a5248d6718ce443e07c7ed314dfff"
+    },
+    "CVE-2017-13047": {
+        "software": "tcpdump",
+        "patch": "331530a4076c69bbd2e3214db6ccbe834fb75640"
+    },
+    "CVE-2020-12768": {
+        "software": "linux",
+        "patch": "d80b64ff297e40c2b6f7d7abc1b3eba70d22a068"
+    },
+    "CVE-2019-18183": {
+        "software": "pacman",
+        "patch": "c0e9be7973be6c81b22fde91516fb8991e7bb07b"
+    },
+    "CVE-2016-10190": {
+        "software": "FFmpeg",
+        "patch": "2a05c8f813de6f2278827734bf8102291e7484aa"
+    },
+    "CVE-2017-17864": {
+        "software": "linux",
+        "patch": "179d1c5602997fef5a940c6ddcf31212cbfebd14"
+    },
+    "CVE-2015-3255": {
+        "software": "polkit",
+        "patch": "9f5e0c731784003bd4d6fc75ab739ff8b2ea269f"
+    },
+    "CVE-2015-3861": {
+        "software": "av",
+        "patch": "566c70caff87c710e659c5aaad0692e031d93ded"
+    },
+    "CVE-2019-15162": {
+        "software": "libpcap",
+        "patch": "484d60cbf7ca4ec758c3cbb8a82d68b244a78d58"
+    },
+    "CVE-2017-13033": {
+        "software": "tcpdump",
+        "patch": "11a07ed27ba5122c8cbd34e8c15bcf0b4969889d"
+    },
+    "CVE-2018-5995": {
+        "software": "linux",
+        "patch": "ad67b74d2469d9b82aaa572d76474c95bc484d57"
+    },
+    "CVE-2019-16710": {
+        "software": "ImageMagick",
+        "patch": "ba21957ed064e1960f39a0d3aac762f39ddc614a"
+    },
+    "CVE-2020-0046": {
+        "software": "av",
+        "patch": "3ae43b0ae940eb860fe03a4db6a17fefa155807a"
+    },
+    "CVE-2018-8769": {
+        "software": "elfutils",
+        "patch": "92581d7eb483cb039e60112b0a03a04c2ffa4df4"
+    },
+    "CVE-2018-17958": {
+        "software": "qemu",
+        "patch": "1a326646fef38782e5542280040ec3ea23e4a730"
+    },
+    "CVE-2019-7152": {
+        "software": "binaryen",
+        "patch": "85e95e315a8023c46eb804fe80ebc244bcfdae3e"
+    },
+    "CVE-2017-13695": {
+        "software": "acpica",
+        "patch": "37f2c716f2c6ab14c3ba557a539c3ee3224931b5"
+    },
+    "CVE-2019-15147": {
+        "software": "gpmf-parser",
+        "patch": "341f12cd5b97ab419e53853ca00176457c9f1681"
+    },
+    "CVE-2017-17122": {
+        "software": "binutils-gdb",
+        "patch": "d785b7d4b877ed465d04072e17ca19d0f47d840f"
+    },
+    "CVE-2020-13398": {
+        "software": "FreeRDP",
+        "patch": "d936402878230fcf9126f38213e28996258a6c4e"
+    },
+    "CVE-2019-14523": {
+        "software": "schismtracker",
+        "patch": "c8986a876959a9d282e882d782af351a86e4034c"
+    },
+    "CVE-2018-20337": {
+        "software": "LibRaw",
+        "patch": "fbf60377c006eaea8d3eca3f5e4c654909dcdfd2"
+    },
+    "CVE-2018-8806": {
+        "software": "libming",
+        "patch": "eeca3fee7a005b9934330a5ce9e683ae21bd120e"
+    },
+    "CVE-2017-12595": {
+        "software": "qpdf",
+        "patch": "ad527a64f93dca12f6aabab2ca99ae5eb352ab4b"
+    },
+    "CVE-2016-9953": {
+        "software": "curl",
+        "patch": "0354eed41085baa5ba8777019ebf5e9ef32c001d"
+    },
+    "CVE-2020-14149": {
+        "software": "uftpd",
+        "patch": "5c3b20158bae4f93e70f6ef8b3b3681006e20680"
+    },
+    "CVE-2016-7937": {
+        "software": "tcpdump",
+        "patch": "cb922d07cce6574874b954555ebad4338748087b"
+    },
+    "CVE-2019-11026": {
+        "software": "poppler",
+        "patch": "8051f678b3b43326e5fdfd7c03f39de21059f426"
+    },
+    "CVE-2019-12730": {
+        "software": "FFmpeg",
+        "patch": "ed188f6dcdf0935c939ed813cf8745d50742014b"
+    },
+    "CVE-2018-13846": {
+        "software": "Bento4",
+        "patch": "17a8c2e8d020197e20782e27605d07f429524a64"
+    },
+    "CVE-2020-0037": {
+        "software": "nfc",
+        "patch": "712dcda25084434ffd3e1e0df6c0f7e65441b7f1"
+    },
+    "CVE-2017-6435": {
+        "software": "libplist",
+        "patch": "fbd8494d5e4e46bf2e90cb6116903e404374fb56"
+    },
+    "CVE-2018-12102": {
+        "software": "md4c",
+        "patch": "e6e2ea4c5a5b972779d9222c4f66b5a693444ce2"
+    },
+    "CVE-2017-13042": {
+        "software": "tcpdump",
+        "patch": "39582c04cc5e34054b2936b423072fb9df2ff6ef"
+    },
+    "CVE-2019-6131": {
+        "software": "mupdf",
+        "patch": "c8f7e48ff74720a5e984ae19d978a5ab4d5dde5b"
+    },
+    "CVE-2016-6163": {
+        "software": "librsvg",
+        "patch": "0035e95118a60c0cd3949c2300472d805e16a022"
+    },
+    "CVE-2018-18582": {
+        "software": "LuPng",
+        "patch": "9a4c7fc580a71496f166121bc5ac7929f322c581"
+    },
+    "CVE-2016-10062": {
+        "software": "ImageMagick",
+        "patch": "8ed56f49e4eb858c26420324d74882a22089fe3d"
+    },
+    "CVE-2017-18201": {
+        "software": "libcdio",
+        "patch": "f6f9c48fb40b8a1e8218799724b0b61a7161eb1d"
+    },
+    "CVE-2015-8215": {
+        "software": "linux",
+        "patch": "77751427a1ff25b27d47a4c36b12c3c8667855ac"
+    },
+    "CVE-2016-7568": {
+        "software": "libgd",
+        "patch": "2806adfdc27a94d333199345394d7c302952b95f"
+    },
+    "CVE-2016-5195": {
+        "software": "linux",
+        "patch": "19be0eaffa3ac7d8eb6784ad9bdbc7d67ed8e619"
+    },
+    "CVE-2018-20190": {
+        "software": "libsass",
+        "patch": "69ae7ef4775e1dbd5985940927e28fe34201331d"
+    },
+    "CVE-2019-20010": {
+        "software": "libredwg",
+        "patch": "7f668ee2604067bf9f23b2c2057a4617002096fc"
+    },
+    "CVE-2018-17962": {
+        "software": "qemu",
+        "patch": "b1d80d12c5f7ff081bb80ab4f4241d4248691192"
+    },
+    "CVE-2016-5157": {
+        "software": "openjpeg",
+        "patch": "e078172b1c3f98d2219c37076b238fb759c751ea"
+    },
+    "CVE-2016-9101": {
+        "software": "qemu",
+        "patch": "2634ab7fe29b3f75d0865b719caf8f310d634aae"
+    },
+    "CVE-2019-18217": {
+        "software": "proftpd",
+        "patch": "13fe9462787b9a551152162f46f1641d65fe4df4"
+    },
+    "CVE-2019-16711": {
+        "software": "ImageMagick",
+        "patch": "ba0e05ee5a983c202f1030c7901ed6b3ed7d652c"
+    },
+    "CVE-2016-3924": {
+        "software": "av",
+        "patch": "4faee5a880c5c5363c64dd8b1d5c8f42bf85e424"
+    },
+    "CVE-2020-0032": {
+        "software": "libavc",
+        "patch": "ffcf2a87d66f935210ebd011eed474514d086b40"
+    },
+    "CVE-2018-20539": {
+        "software": "libLAS",
+        "patch": "ca88a11a8a0548d3aa78b643e6c701708b826fa9"
+    },
+    "CVE-2019-3574": {
+        "software": "libsixel",
+        "patch": "9c013f23661370a5ece2f0c9c1acfd342e2efebb"
+    },
+    "CVE-2019-12835": {
+        "software": "Leanify",
+        "patch": "4e3ee35019c47fdde0375debce83d1248e111a3b"
+    },
+    "CVE-2016-8619": {
+        "software": "curl",
+        "patch": "3d6460edeee21d7d790ec570d0887bed1f4366dd"
+    },
+    "CVE-2016-7518": {
+        "software": "ImageMagick",
+        "patch": "2174484dfa68a594e2f9ad17f46217b6120db18d"
+    },
+    "CVE-2015-8630": {
+        "software": "krb5",
+        "patch": "b863de7fbf080b15e347a736fdda0a82d42f4f6b"
+    },
+    "CVE-2016-9841": {
+        "software": "zlib",
+        "patch": "9aaec95e82117c1cb0f9624264c3618fc380cecb"
+    },
+    "CVE-2018-5801": {
+        "software": "LibRaw",
+        "patch": "4cb60a6c8f1ec54e51e805d94213f4d49d6118f6"
+    },
+    "CVE-2018-9261": {
+        "software": "wireshark",
+        "patch": "66bc372716e04d6a8afdf6712583c9b5d11fee55"
+    },
+    "CVE-2015-8921": {
+        "software": "libarchive",
+        "patch": "1cbc76faffb79a99c6009a1816736f73b4a3632a"
+    },
+    "CVE-2018-13112": {
+        "software": "tcpreplay",
+        "patch": "bc14ab78ecab4f58be0d8390c286c002313a5e04"
+    },
+    "CVE-2020-12278": {
+        "software": "libgit2",
+        "patch": "3f7851eadca36a99627ad78cbe56a40d3776ed01"
+    },
+    "CVE-2017-8086": {
+        "software": "qemu",
+        "patch": "4ffcdef4277a91af15a3c09f7d16af072c29f3f2"
+    },
+    "CVE-2019-12980": {
+        "software": "libming",
+        "patch": "a009a38dce1d9316cad1ab522b813b1d5ba4c62a"
+    },
+    "CVE-2018-6484": {
+        "software": "zziplib",
+        "patch": "0c0c9256b0903f664bca25dd8d924211f81e01d3"
+    },
+    "CVE-2019-10879": {
+        "software": "teeworlds",
+        "patch": "4d529dcd2d01022e979ebfa0b91167dee37cdb8e"
+    },
+    "CVE-2019-11873": {
+        "software": "wolfssl",
+        "patch": "5aa5f350ba0f05a6e19e0b680a32975aa8871686"
+    },
+    "CVE-2019-20022": {
+        "software": "libsixel",
+        "patch": "e17c0765ed708186865f0f8badfed44181063776"
+    },
+    "CVE-2018-18836": {
+        "software": "netdata",
+        "patch": "92327c9ec211bd1616315abcb255861b130b97ca"
+    },
+    "CVE-2018-10124": {
+        "software": "linux",
+        "patch": "4ea77014af0d6205b05503d1c7aac6eace11d473"
+    },
+    "CVE-2017-5507": {
+        "software": "ImageMagick",
+        "patch": "66e283e0a9c141b19fe6c4c39f4a41c0d3188ba8"
+    },
+    "CVE-2017-14684": {
+        "software": "ImageMagick",
+        "patch": "dd367e0c3c3f37fbf1c20fa107b67a668b22c6e2"
+    },
+    "CVE-2019-18840": {
+        "software": "wolfssl",
+        "patch": "52f28bd5149360f8e3bf8ca13d3fb9a77283df7c"
+    },
+    "CVE-2019-13626": {
+        "software": "SDL",
+        "patch": "d842fe91a369646eaf099bb7f1861f12b99a5aac"
+    },
+    "CVE-2016-7908": {
+        "software": "qemu",
+        "patch": "070c4b92b8cd5390889716677a0b92444d6e087a"
+    },
+    "CVE-2019-19378": {
+        "software": "linux",
+        "patch": "6592e58c6b68e61f003a01ba29a3716e7e2e9484"
+    },
+    "CVE-2018-7331": {
+        "software": "wireshark",
+        "patch": "2b74b5c4c8836f413c675d8f7f80c8356b6b1722"
+    },
+    "CVE-2018-20195": {
+        "software": "faad2",
+        "patch": "466b01d504d7e45f1e9169ac90b3e34ab94aed14"
+    },
+    "CVE-2016-5114": {
+        "software": "php-src",
+        "patch": "2eaa7556605ffc0d78c89965f5e905cf801207ef"
+    },
+    "CVE-2016-3120": {
+        "software": "krb5",
+        "patch": "93b4a6306a0026cf1cc31ac4bd8a49ba5d034ba7"
+    },
+    "CVE-2019-16352": {
+        "software": "ffjpeg",
+        "patch": "d003dd61abfe7ab68fd89bbdb5608882ac128e61"
+    },
+    "CVE-2018-20409": {
+        "software": "Bento4",
+        "patch": "7a0a4af171e44bdd7ca8e2a180d9368cb59e2998"
+    },
+    "CVE-2018-17967": {
+        "software": "ImageMagick",
+        "patch": "dede8409341ba16c068cb3f733af8ccbe714f7f0"
+    },
+    "CVE-2019-20219": {
+        "software": "ngiflib",
+        "patch": "5bad360070216388768be9b66d9fb59241e86d66"
+    },
+    "CVE-2019-7577": {
+        "software": "SDL",
+        "patch": "1b84f5b1f8584679ac413f21260dc5ff9672f9aa"
+    },
+    "CVE-2019-12207": {
+        "software": "njs",
+        "patch": "d14fed64975e3168346038a5ce5e11534ad84b57"
+    },
+    "CVE-2019-19203": {
+        "software": "oniguruma",
+        "patch": "aa0188eaedc056dca8374ac03d0177429b495515"
+    },
+    "CVE-2018-7487": {
+        "software": "sam2p",
+        "patch": "22bb39092ac904e4951780930d7c5f2703c5accc"
+    },
+    "CVE-2017-13746": {
+        "software": "jasper",
+        "patch": "1b1c591306817e46e1e6a3300f714992b32f972b"
+    },
+    "CVE-2017-11530": {
+        "software": "ImageMagick",
+        "patch": "a14e7f1f78d99891132e061c05f83aefc59e049a"
+    },
+    "CVE-2017-12565": {
+        "software": "ImageMagick",
+        "patch": "e0e544bb173213df00f82a810d66321e1bb4f3c8"
+    },
+    "CVE-2017-11525": {
+        "software": "ImageMagick",
+        "patch": "fa3cf0b45980a4c2ea2345032fe43444dfb05bdb"
+    },
+    "CVE-2019-10872": {
+        "software": "poppler",
+        "patch": "6a1580e84f492b5671d23be98192267bb73de250"
+    },
+    "CVE-2018-16419": {
+        "software": "OpenSC",
+        "patch": "360e95d45ac4123255a4c796db96337f332160ad"
+    },
+    "CVE-2018-19889": {
+        "software": "faac",
+        "patch": "bdb83a630e3c0c5b91481336e74951806efea534"
+    },
+    "CVE-2017-14929": {
+        "software": "poppler",
+        "patch": "2c92c7b6a828c9db8a38f079ea7a3d51c12a481d"
+    },
+    "CVE-2015-3195": {
+        "software": "openssl",
+        "patch": "cc598f321fbac9c04da5766243ed55d55948637d"
+    },
+    "CVE-2018-9263": {
+        "software": "wireshark",
+        "patch": "4adb8e9f6af7b5e4568f50a29ae9814b5e190088"
+    },
+    "CVE-2019-7636": {
+        "software": "SDL",
+        "patch": "c5566ee0880ab0923f09da32655a48201e2adffc"
+    },
+    "CVE-2016-6162": {
+        "software": "linux",
+        "patch": "a612769774a30e4fc143c4cb6395c12573415660"
+    },
+    "CVE-2020-12243": {
+        "software": "openldap",
+        "patch": "d38d48fc8f572dedfb67b9da61a2ba3b125ced91"
+    },
+    "CVE-2017-5340": {
+        "software": "php-src",
+        "patch": "4cc0286f2f3780abc6084bcdae5dce595daa3c12"
+    },
+    "CVE-2017-11334": {
+        "software": "qemu",
+        "patch": "04bf2526ce87f21b32c9acba1c5518708c243ad0"
+    },
+    "CVE-2018-9260": {
+        "software": "wireshark",
+        "patch": "14d6f717d8ea27688af48532edb1d29f502ea8f0"
+    },
+    "CVE-2015-7674": {
+        "software": "gdk-pixbuf",
+        "patch": "e9a5704edaa9aee9498f1fbf6e1b70fcce2e55aa"
+    },
+    "CVE-2015-2310": {
+        "software": "capnproto",
+        "patch": "f343f0dbd0a2e87f17cd74f14186ed73e3fbdbfa"
+    },
+    "CVE-2018-20618": {
+        "software": "ok-file-formats",
+        "patch": "7a9fe7542c69a0f432060cdf3e86d66bf98b55d2"
+    },
+    "CVE-2016-9387": {
+        "software": "jasper",
+        "patch": "d91198abd00fc435a397fe6bad906a4c1748e9cf"
+    },
+    "CVE-2020-12761": {
+        "software": "imlib2",
+        "patch": "c95f938ff1effaf91729c050a0f1c8684da4dd63"
+    },
+    "CVE-2016-10141": {
+        "software": "mujs",
+        "patch": "fa3d30fd18c348bb4b1f3858fb860f4fcd4b2045"
+    },
+    "CVE-2016-9822": {
+        "software": "libav",
+        "patch": "e807491fc6a336e4becc0cbc981274a8fde18aba"
+    },
+    "CVE-2020-12430": {
+        "software": "libvirt",
+        "patch": "9bf9e0ae6af38c806f4672ca7b12a6b38d5a9581"
+    },
+    "CVE-2018-5251": {
+        "software": "libming",
+        "patch": "c14d07ef20c3f403fcfa59502b74c66933473431"
+    },
+    "CVE-2019-20011": {
+        "software": "libredwg",
+        "patch": "d15cab0fe5a160f7e5981363117c8cbcd5c82423"
+    },
+    "CVE-2019-19906": {
+        "software": "cyrus-sasl",
+        "patch": "dcc9f51cbd4ed622cfb0f9b1c141eb2ffe3b12f1"
+    },
+    "CVE-2016-4447": {
+        "software": "libxml2",
+        "patch": "00906759053986b8079985644172085f74331f83"
+    },
+    "CVE-2016-7940": {
+        "software": "tcpdump",
+        "patch": "968776fbf5cd65c7ea2168912bd9f4379727eb11"
+    },
+    "CVE-2017-7294": {
+        "software": "linux",
+        "patch": "e7e11f99564222d82f0ce84bd521e57d78a6b678"
+    },
+    "CVE-2016-5829": {
+        "software": "linux",
+        "patch": "93a2001bdfd5376c3dc2158653034c20392d15c5"
+    },
+    "CVE-2017-14727": {
+        "software": "weechat",
+        "patch": "e4cc90f4b43153dc1c6516c1f1aad2504faa5443"
+    },
+    "CVE-2020-0006": {
+        "software": "nfc",
+        "patch": "2e1feaad404748c5d9d02d92bb2973d8aa9dfb96"
+    },
+    "CVE-2019-14370": {
+        "software": "exiv2",
+        "patch": "bd0afe0390439b2c424d881c8c6eb0c5624e31d9"
+    },
+    "CVE-2020-14212": {
+        "software": "ffmpeg",
+        "patch": "0b3bd001ac1745d9d008a2d195817df57d7d1d14"
+    },
+    "CVE-2018-11684": {
+        "software": "liblouis",
+        "patch": "fb2bfce4ed49ac4656a8f7e5b5526e4838da1dde"
+    },
+    "CVE-2017-14930": {
+        "software": "binutils-gdb",
+        "patch": "a26a013f22a19e2c16729e64f40ef8a7dfcc086e"
+    },
+    "CVE-2017-12562": {
+        "software": "libsndfile",
+        "patch": "cf7a8182c2642c50f1cf90dddea9ce96a8bad2e8"
+    },
+    "CVE-2017-15116": {
+        "software": "linux",
+        "patch": "94f1bb15bed84ad6c893916b7e7b9db6f1d7eec6"
+    },
+    "CVE-2017-14517": {
+        "software": "poppler",
+        "patch": "476394e7a025e02e4897da2e765df2c895d0708f"
+    },
+    "CVE-2019-13207": {
+        "software": "nsd",
+        "patch": "91102da24d5949ccfec8fdab5bae2d01c4cabab5"
+    },
+    "CVE-2019-12206": {
+        "software": "njs",
+        "patch": "ee332a01a8a3e87e5787927318eecc214196376c"
+    },
+    "CVE-2018-12889": {
+        "software": "ccn-lite",
+        "patch": "cd1bd188eaf58b1972cf80ce3a5d3f1c81f14bf1"
+    },
+    "CVE-2016-7143": {
+        "software": "charybdis",
+        "patch": "818a3fda944b26d4814132cee14cfda4ea4aa824"
+    },
+    "CVE-2016-10169": {
+        "software": "WavPack",
+        "patch": "4bc05fc490b66ef2d45b1de26abf1455b486b0dc"
+    },
+    "CVE-2018-20197": {
+        "software": "faad2",
+        "patch": "6b4a7cde30f2e2cb03e78ef476cc73179cfffda3"
+    },
+    "CVE-2019-17042": {
+        "software": "rsyslog",
+        "patch": "7092b225f17774325a891cb2e74fa12034e92104"
+    },
+    "CVE-2017-14988": {
+        "software": "openexr",
+        "patch": "4c146c50e952655bc193567224c2a081c7da5e98"
+    },
+    "CVE-2019-17450": {
+        "software": "binutils-gdb",
+        "patch": "063c511bd79281f33fd33f0964541a73511b9e2b"
+    },
+    "CVE-2017-16818": {
+        "software": "ceph",
+        "patch": "6f9c008b7a76958aadfcd79979852ec03fd0ebc6"
+    },
+    "CVE-2018-0500": {
+        "software": "curl",
+        "patch": "ba1dbd78e5f1ed67c1b8d37ac89d90e5e330b628"
+    },
+    "CVE-2018-6541": {
+        "software": "zziplib",
+        "patch": "0c0c9256b0903f664bca25dd8d924211f81e01d3"
+    },
+    "CVE-2019-19888": {
+        "software": "ffjpeg",
+        "patch": "d6158811dbb4e97dc1cc9820ed0e846468366658"
+    },
+    "CVE-2019-14745": {
+        "software": "radare2",
+        "patch": "5411543a310a470b1257fb93273cdd6e8dfcb3af"
+    },
+    "CVE-2016-4539": {
+        "software": "php-src",
+        "patch": "dccda88f27a084bcbbb30198ace12b4e7ae961cc"
+    },
+    "CVE-2018-16429": {
+        "software": "glib",
+        "patch": "cec71705406f0b2790422f0c1aa0ff3b4b464b1b"
+    },
+    "CVE-2020-15365": {
+        "software": "LibRaw",
+        "patch": "55f0a0c08974b8b79ebfa7762b555a1704b25fb2"
+    },
+    "CVE-2018-11468": {
+        "software": "discount",
+        "patch": "b002a5a4db31e42dfb45451c059bc56941c17974"
+    },
+    "CVE-2018-5268": {
+        "software": "opencv",
+        "patch": "435a3e337bd9d4e11af61cf8b8afca067bf1a8aa"
+    },
+    "CVE-2016-2418": {
+        "software": "av",
+        "patch": "da9ca91ffd3727aca2ee8ae60cbe9fa3b0873cc5"
+    },
+    "CVE-2018-14342": {
+        "software": "wireshark",
+        "patch": "36af43dbb7673495948cd65d0346e8b9812b941c"
+    },
+    "CVE-2017-5525": {
+        "software": "qemu",
+        "patch": "12351a91da97b414eec8cdb09f1d9f41e535a401"
+    },
+    "CVE-2019-20021": {
+        "software": "upx",
+        "patch": "819c33fee2b2c33b96bef27a13cb20f2589819aa"
+    },
+    "CVE-2016-9392": {
+        "software": "jasper",
+        "patch": "f7038068550fba0e41e1d0c355787f1dcd5bf330"
+    },
+    "CVE-2016-9390": {
+        "software": "jasper",
+        "patch": "ba2b9d000660313af7b692542afbd374c5685865"
+    },
+    "CVE-2020-0078": {
+        "software": "av",
+        "patch": "2587ab6c7642062ea1791de1868c28b1164a073c"
+    },
+    "CVE-2018-19058": {
+        "software": "poppler",
+        "patch": "6912e06d9ab19ba28991b5cab3319d61d856bd6d"
+    },
+    "CVE-2019-20053": {
+        "software": "upx",
+        "patch": "819c33fee2b2c33b96bef27a13cb20f2589819aa"
+    },
+    "CVE-2017-5205": {
+        "software": "tcpdump",
+        "patch": "51d66a246aacc081d05590fa11cc367d7e6778f4"
+    },
+    "CVE-2016-7393": {
+        "software": "libav",
+        "patch": "110e11981821720390d3bdc03bc6fd78e1fb348d"
+    },
+    "CVE-2016-8667": {
+        "software": "qemu",
+        "patch": "c0a3172fa6bbddcc73192f2a2c48d0bf3a7ba61c"
+    },
+    "CVE-2017-8064": {
+        "software": "linux",
+        "patch": "005145378c9ad7575a01b6ce1ba118fb427f583a"
+    },
+    "CVE-2016-3177": {
+        "software": "giflib",
+        "patch": "7287722a6278dd0ab483ab50c0ded6d1dd805a0c"
+    },
+    "CVE-2017-8343": {
+        "software": "ImageMagick",
+        "patch": "448492b929894ecbfb1007c3cee5c45ce9c6cba3"
+    },
+    "CVE-2019-9748": {
+        "software": "TizenRT",
+        "patch": "2d9a3f156f1a5b551403aabef2fa9edfe1ad12bc"
+    },
+    "CVE-2016-4419": {
+        "software": "wireshark",
+        "patch": "48de5c5a1b6678451c9e936b957138bac0c82f89"
+    },
+    "CVE-2018-9446": {
+        "software": "bt",
+        "patch": "a1f36cf26ef6b29a259e322c4614e5204ff0d4f1"
+    },
+    "CVE-2018-20196": {
+        "software": "faad2",
+        "patch": "6aeeaa1af0caf986daf22852a97f7c13c5edd879"
+    },
+    "CVE-2017-5628": {
+        "software": "mujs",
+        "patch": "8f62ea10a0af68e56d5c00720523ebcba13c2e6a"
+    },
+    "CVE-2018-11362": {
+        "software": "wireshark",
+        "patch": "f177008b04a530640de835ca878892e58b826d58"
+    },
+    "CVE-2015-7392": {
+        "software": "freeswitch",
+        "patch": "26bed941b36b71cf6b128faad0da5e0cd714afb9"
+    },
+    "CVE-2019-6130": {
+        "software": "mupdf",
+        "patch": "faf47b94e24314d74907f3f6bc874105f2c962ed"
+    },
+    "CVE-2017-18008": {
+        "software": "ImageMagick",
+        "patch": "c3d87ccac8cb0e11c92e09c9c311684c5b6e792c"
+    },
+    "CVE-2018-15378": {
+        "software": "clamav-devel",
+        "patch": "20e3cfc08ac6da5b695f09502e5d39304aff54b8"
+    },
+    "CVE-2015-8467": {
+        "software": "samba",
+        "patch": "1595f56634a8950c4493799b30c2dbe254466751"
+    },
+    "CVE-2019-11596": {
+        "software": "memcached",
+        "patch": "d35334f368817a77a6bd1f33c6a5676b2c402c02"
+    },
+    "CVE-2018-8810": {
+        "software": "radare2",
+        "patch": "06c9903be9a1ca46b74571d49027bee2168fbd69"
+    },
+    "CVE-2018-14072": {
+        "software": "libsixel",
+        "patch": "f94bc6fec696abd77be275226f28409602bd1f27"
+    },
+    "CVE-2018-9521": {
+        "software": "av",
+        "patch": "e96c64a0d21d1ab2c9ba9726766fd8432462888a"
+    },
+    "CVE-2017-12667": {
+        "software": "ImageMagick",
+        "patch": "bfb7915d4b2e11acb6a819e451c382dc645277db"
+    },
+    "CVE-2018-6836": {
+        "software": "wireshark",
+        "patch": "28960d79cca262ac6b974f339697b299a1e28fef"
+    },
+    "CVE-2018-17580": {
+        "software": "tcpreplay",
+        "patch": "68f67b1a3a4d319543692afb5bd5b191ec984287"
+    },
+    "CVE-2016-10209": {
+        "software": "libarchive",
+        "patch": "42a3408ac7df1e69bea9ea12b72e14f59f7400c0"
+    },
+    "CVE-2017-16536": {
+        "software": "linux",
+        "patch": "6c3b047fa2d2286d5e438bcb470c7b1a49f415f6"
+    },
+    "CVE-2018-20355": {
+        "software": "mongoose",
+        "patch": "a8b74a9021b83e2bfff5ef6d60f668ac65521a6f"
+    },
+    "CVE-2020-13249": {
+        "software": "mariadb-connector-c",
+        "patch": "2759b87d72926b7c9b5426437a7c8dd15ff57945"
+    },
+    "CVE-2018-16149": {
+        "software": "axtls-8266",
+        "patch": "5efe2947ab45e81d84b5f707c51d1c64be52f36c"
+    },
+    "CVE-2015-0268": {
+        "software": "xen",
+        "patch": "97c4e77538f24786dc7521cdffb2b4d6e3dad7ed"
+    },
+    "CVE-2017-0594": {
+        "software": "av",
+        "patch": "dbdf026f768f5479caf2a23526e593f2199ca815"
+    },
+    "CVE-2018-20455": {
+        "software": "radare2",
+        "patch": "9b46d38dd3c4de6048a488b655c7319f845af185"
+    },
+    "CVE-2019-20063": {
+        "software": "libmysofa",
+        "patch": "f571522bfcee062b1277f6e480a90e4802b8e301"
+    },
+    "CVE-2018-13844": {
+        "software": "htslib",
+        "patch": "99acb64270f43a015672b4cd9e72c3b02c334c4d"
+    },
+    "CVE-2018-10323": {
+        "software": "linux",
+        "patch": "2c4306f719b083d17df2963bc761777576b8ad1b"
+    },
+    "CVE-2015-8928": {
+        "software": "libarchive",
+        "patch": "64d56286ccc5d26d1eec1ef835e8e671f3ba6b84"
+    },
+    "CVE-2017-11407": {
+        "software": "wireshark",
+        "patch": "4e54dae7f0d7840836ee6d5ce1e688f152ab2978"
+    },
+    "CVE-2016-8669": {
+        "software": "qemu",
+        "patch": "3592fe0c919cf27a81d8e9f9b4f269553418bb01"
+    },
+    "CVE-2017-13710": {
+        "software": "binutils-gdb",
+        "patch": "0c54f69295208331faab9bc5e995111a35672f9b"
+    },
+    "CVE-2017-5627": {
+        "software": "mujs",
+        "patch": "4006739a28367c708dea19aeb19b8a1a9326ce08"
+    },
+    "CVE-2015-7498": {
+        "software": "libxml2",
+        "patch": "afd27c21f6b36e22682b7da20d726bce2dcb2f43"
+    },
+    "CVE-2016-9799": {
+        "software": "bluez",
+        "patch": "0f4b19f7f94df696983d0ce3bb0515e960474cba"
+    },
+    "CVE-2018-11243": {
+        "software": "upx",
+        "patch": "d9288213ec156dffc435566b9d393d23e87c6914"
+    },
+    "CVE-2019-13298": {
+        "software": "ImageMagick",
+        "patch": "d4fc44b58a14f76b1ac997517d742ee12c9dc5d3"
+    },
+    "CVE-2019-16095": {
+        "software": "libmysofa",
+        "patch": "a55565a3165113619386c8443aa89a662866a11e"
+    },
+    "CVE-2016-6265": {
+        "software": "mupdf",
+        "patch": "fa1936405b6a84e5c9bb440912c23d532772f958"
+    },
+    "CVE-2017-12664": {
+        "software": "ImageMagick",
+        "patch": "0417cea1b6d72f90bd4f1f573f91e42a8ba66a89"
+    },
+    "CVE-2019-7151": {
+        "software": "binaryen",
+        "patch": "85e95e315a8023c46eb804fe80ebc244bcfdae3e"
+    },
+    "CVE-2018-20125": {
+        "software": "qemu",
+        "patch": "2c858ce5da8ae6689c75182b73bc455a291cad41"
+    },
+    "CVE-2019-12381": {
+        "software": "net",
+        "patch": "425aa0e1d01513437668fa3d4a971168bbaa8515"
+    },
+    "CVE-2017-16898": {
+        "software": "libming",
+        "patch": "6032557a21e4dac8bb2606bb5b58e27d85a7ff98"
+    },
+    "CVE-2019-20052": {
+        "software": "matio",
+        "patch": "a47b7cd3aca70e9a0bddf8146eb4ab0cbd19c2c3"
+    },
+    "CVE-2015-3415": {
+        "software": "sqlite",
+        "patch": "bc8a6b31b69b202cd66e6c4f51beb27cf01d9c11"
+    },
+    "CVE-2016-1626": {
+        "software": "openjpeg",
+        "patch": "11445eddad7e7fa5b273d1c83c91011c44e5d586"
+    },
+    "CVE-2018-20349": {
+        "software": "igraph",
+        "patch": "e3a9566e6463186230f215151b57b893df6d9ce2"
+    },
+    "CVE-2017-13089": {
+        "software": "wget",
+        "patch": "d892291fb8ace4c3b734ea5125770989c215df3f"
+    },
+    "CVE-2019-14496": {
+        "software": "MilkyTracker",
+        "patch": "ea7772a3fae0a9dd0a322e8fec441d15843703b7"
+    },
+    "CVE-2018-18690": {
+        "software": "linux",
+        "patch": "7b38460dc8e4eafba06c78f8e37099d3b34d473c"
+    },
+    "CVE-2016-6290": {
+        "software": "php-src",
+        "patch": "3798eb6fd5dddb211b01d41495072fd9858d4e32"
+    },
+    "CVE-2017-12459": {
+        "software": "binutils-gdb",
+        "patch": "8bdf0be19d2777565a8b1c88347f65d6a4b8c5fc"
+    },
+    "CVE-2019-7154": {
+        "software": "binaryen",
+        "patch": "e63c4a7d04c145dafaf4b09de5f9f5de69cee8ef"
+    },
+    "CVE-2018-6540": {
+        "software": "zziplib",
+        "patch": "15b8c969df962a444dfa07b3d5bd4b27dc0dbba7"
+    },
+    "CVE-2017-17854": {
+        "software": "linux",
+        "patch": "bb7f0f989ca7de1153bd128a40a71709e339fa03"
+    },
+    "CVE-2017-8289": {
+        "software": "RIOT",
+        "patch": "59a7e01bbfa3b8870bedb7c6820723ee69cd8ca2"
+    },
+    "CVE-2017-16890": {
+        "software": "swftools",
+        "patch": "8780b2bd3f6730def722e7c5c258a708f1688e45"
+    },
+    "CVE-2018-7420": {
+        "software": "wireshark",
+        "patch": "129e41f9f63885ad8224ef413c2860788fb9e849"
+    },
+    "CVE-2018-18190": {
+        "software": "gpmf-parser",
+        "patch": "1af4c813cbb08797ab9f92eee37eb14661cc496a"
+    },
+    "CVE-2016-6296": {
+        "software": "php-src",
+        "patch": "e6c48213c22ed50b2b987b479fcc1ac709394caa"
+    },
+    "CVE-2017-18271": {
+        "software": "ImageMagick",
+        "patch": "fd237e58af79b93c9fbc352bb1d977d85d5f5958"
+    },
+    "CVE-2018-11685": {
+        "software": "liblouis",
+        "patch": "b5049cb17ae3d15b2b26890de0e24d0fecc080f5"
+    },
+    "CVE-2018-14437": {
+        "software": "ImageMagick",
+        "patch": "082223fb992448dbb574747deac9a30f986c116e"
+    },
+    "CVE-2016-4794": {
+        "software": "linux",
+        "patch": "6710e594f71ccaad8101bc64321152af7cd9ea28"
+    },
+    "CVE-2020-6613": {
+        "software": "libredwg",
+        "patch": "5c19f597ca87363be1bcaf5d7fa06942120a8280"
+    },
+    "CVE-2016-7535": {
+        "software": "ImageMagick",
+        "patch": "533ea3b9047c67f9af49703de672f6c2e443f747"
+    },
+    "CVE-2018-0495": {
+        "software": "libgcrypt",
+        "patch": "9010d1576e278a4274ad3f4aa15776c28f6ba965"
+    },
+    "CVE-2016-8687": {
+        "software": "libarchive",
+        "patch": "e37b620fe8f14535d737e89a4dcabaed4517bf1a"
+    },
+    "CVE-2019-20166": {
+        "software": "gpac",
+        "patch": "5250afecbc770c8f26829e9566d5b226a3c5fa80"
+    },
+    "CVE-2018-16641": {
+        "software": "ImageMagick",
+        "patch": "256825d4eb33dc301496710d15cf5a7ae924088b"
+    },
+    "CVE-2018-20357": {
+        "software": "faad2",
+        "patch": "a8dc3f8ce67f4069cfa4d5cf0fcc2c6e8ef2c2aa"
+    },
+    "CVE-2018-7247": {
+        "software": "leptonica",
+        "patch": "c1079bb8e77cdd426759e466729917ca37a3ed9f"
+    },
+    "CVE-2019-17264": {
+        "software": "liblnk",
+        "patch": "c4d04de2c76f62129677c90a616d049be9c52482"
+    },
+    "CVE-2018-17360": {
+        "software": "binutils-gdb",
+        "patch": "cf93e9c2cf8f8b2566f8fc86e961592b51b5980d"
+    },
+    "CVE-2020-8647": {
+        "software": "linux",
+        "patch": "513dc792d6060d5ef572e43852683097a8420f56"
+    },
+    "CVE-2019-9773": {
+        "software": "libredwg",
+        "patch": "dace1ef9447cb567c5f1ab5f9217579ff3a14b2d"
+    },
+    "CVE-2019-9200": {
+        "software": "poppler",
+        "patch": "f4136a6353162db249f63ddb0f20611622ab61b4"
+    },
+    "CVE-2015-8569": {
+        "software": "linux",
+        "patch": "09ccfd238e5a0e670d8178cf50180ea81ae09ae1"
+    },
+    "CVE-2017-5580": {
+        "software": "virglrenderer",
+        "patch": "28894a30a17a84529be102b21118e55d6c9f23fa"
+    },
+    "CVE-2016-4072": {
+        "software": "php-src",
+        "patch": "1e9b175204e3286d64dfd6c9f09151c31b5e099a"
+    },
+    "CVE-2019-9923": {
+        "software": "tar",
+        "patch": "cb07844454d8cc9fb21f53ace75975f91185a120"
+    },
+    "CVE-2017-11533": {
+        "software": "ImageMagick",
+        "patch": "f0c29cc251578fe0ad8ec7b72f2487a77a1696b8"
+    },
+    "CVE-2019-7638": {
+        "software": "SDL",
+        "patch": "c5566ee0880ab0923f09da32655a48201e2adffc"
+    },
+    "CVE-2017-12858": {
+        "software": "libzip",
+        "patch": "2217022b7d1142738656d891e00b3d2d9179b796"
+    },
+    "CVE-2017-14169": {
+        "software": "FFmpeg",
+        "patch": "b2aa633d663d4ed962ed92fcf5657df50521a8d9"
+    },
+    "CVE-2017-8356": {
+        "software": "ImageMagick",
+        "patch": "dbc1e15ebc8e9bc4ff4a17cf603ba1ccecf477e3"
+    },
+    "CVE-2016-4417": {
+        "software": "wireshark",
+        "patch": "c31425f9ae15067e26ccc6183c206c34713cb256"
+    },
+    "CVE-2018-17569": {
+        "software": "viabtc_exchange_server",
+        "patch": "4a7c27bfe98f409623d4d857894d017ff0672cc9"
+    },
+    "CVE-2016-3158": {
+        "software": "xen",
+        "patch": "7bd9dc3adfbb014c55f0928ebb3b20950ca9c019"
+    },
+    "CVE-2017-7645": {
+        "software": "linux",
+        "patch": "e6838a29ecb484c97e4efef9429643b9851fba6e"
+    },
+    "CVE-2018-19761": {
+        "software": "libsixel",
+        "patch": "7f2d21619ed13cad62aaa64bee975ec16b1d76ac"
+    },
+    "CVE-2019-19638": {
+        "software": "libsixel",
+        "patch": "93812d61e671ddcf2c7c7a198c5970b4dd2b7f6e"
+    },
+    "CVE-2017-14640": {
+        "software": "Bento4",
+        "patch": "2f267f89f957088197f4b1fc254632d1645b415d"
+    },
+    "CVE-2017-14970": {
+        "software": "ovs",
+        "patch": "77ad4225d125030420d897c873e4734ac708c66b"
+    },
+    "CVE-2017-8921": {
+        "software": "flightgear",
+        "patch": "faf872e7f71ca14c567ac7080561fc785d8d2fd0"
+    },
+    "CVE-2017-13686": {
+        "software": "linux",
+        "patch": "bc3aae2bbac46dd894c89db5d5e98f7f0ef9e205"
+    },
+    "CVE-2018-19890": {
+        "software": "faac",
+        "patch": "bdb83a630e3c0c5b91481336e74951806efea534"
+    },
+    "CVE-2017-11527": {
+        "software": "ImageMagick",
+        "patch": "be531eaab7f13ea935aaef231473044a439c9bfc"
+    },
+    "CVE-2017-7610": {
+        "software": "elfutils",
+        "patch": "9a0d9d314a6342b56e3277bd7ad7ecb6e73a7d38"
+    },
+    "CVE-2018-11489": {
+        "software": "sam2p",
+        "patch": "3eea9c499977ffd9da64ca9ad0967706a5b26004"
+    },
+    "CVE-2017-14518": {
+        "software": "poppler",
+        "patch": "80f9819b6233f9f9b5fd44f0e4cad026e5d048c2"
+    },
+    "CVE-2018-5802": {
+        "software": "LibRaw",
+        "patch": "4cb60a6c8f1ec54e51e805d94213f4d49d6118f6"
+    },
+    "CVE-2017-16869": {
+        "software": "upx",
+        "patch": "6eafa552bb4bf2303fbadf1f65e7d99919d476c6"
+    },
+    "CVE-2018-7877": {
+        "software": "libming",
+        "patch": "30170828f1e8e4dff95af6e319b4ad59e64796d9"
+    },
+    "CVE-2020-0143": {
+        "software": "nfc",
+        "patch": "87add19258db00bdd2b95f51382b948bad1292f7"
+    },
+    "CVE-2015-8920": {
+        "software": "libarchive",
+        "patch": "97f964e3e0ce3ae34bfb4c366a37ba7c0d9610a6"
+    },
+    "CVE-2015-7812": {
+        "software": "xen",
+        "patch": "29bcf64ce8bc0b1b7aacd00c8668f255c4f0686c"
+    },
+    "CVE-2019-12802": {
+        "software": "radare2",
+        "patch": "93af319e0af787ede96537d46210369f5c24240c"
+    },
+    "CVE-2016-7116": {
+        "software": "qemu",
+        "patch": "56f101ecce0eafd09e2daf1c4eeb1377d6959261"
+    },
+    "CVE-2018-18957": {
+        "software": "libiec61850",
+        "patch": "33ce512c476330e7e4881d1377645ffb87985808"
+    },
+    "CVE-2017-8363": {
+        "software": "libsndfile",
+        "patch": "fd0484aba8e51d16af1e3a880f9b8b857b385eb3"
+    },
+    "CVE-2018-12112": {
+        "software": "md4c",
+        "patch": "8fc692badce0cdee08b6385aa590280c64f19fb8"
+    },
+    "CVE-2016-4021": {
+        "software": "pgpdump",
+        "patch": "ded250a67e32f0f7d94d63bb767c97bc4e5ca911"
+    },
+    "CVE-2020-0038": {
+        "software": "nfc",
+        "patch": "712dcda25084434ffd3e1e0df6c0f7e65441b7f1"
+    },
+    "CVE-2015-4472": {
+        "software": "libmspack",
+        "patch": "3f8a171b95b858f2d98e60b6da8a427ef530516b"
+    },
+    "CVE-2018-12034": {
+        "software": "yara",
+        "patch": "6298031fa743b5542bf0e6daf2b47d17c35505e0"
+    },
+    "CVE-2018-7552": {
+        "software": "sam2p",
+        "patch": "4aa27783d1e95fb0d65144a8a8f91104d1bdbe58"
+    },
+    "CVE-2018-12600": {
+        "software": "ImageMagick",
+        "patch": "921f208c2ea3cc45847f380257f270ff424adfff"
+    },
+    "CVE-2019-17402": {
+        "software": "exiv2",
+        "patch": "683451567284005cd24e1ccb0a76ca401000968b"
+    },
+    "CVE-2016-8677": {
+        "software": "ImageMagick",
+        "patch": "6e48aa92ff4e6e95424300ecd52a9ea453c19c60"
+    },
+    "CVE-2020-0158": {
+        "software": "nfc",
+        "patch": "0e108e626d7399f89a4bb0c4f1e782490dd2deb3"
+    },
+    "CVE-2017-14054": {
+        "software": "FFmpeg",
+        "patch": "770482def3b3064e236f9a0e1b6f5d0ca35ae7e2"
+    },
+    "CVE-2019-12293": {
+        "software": "poppler",
+        "patch": "89a5367d49b2556a2635dbb6d48d6a6b182a2c6c"
+    },
+    "CVE-2018-11592": {
+        "software": "Espruino",
+        "patch": "8a44b04b584b3d3ab1cb68fed410f7ecb165e50e"
+    },
+    "CVE-2020-0134": {
+        "software": "av",
+        "patch": "bb907e884ad7fee3e7c4d8fa6df45fc2402b5c4a"
+    },
+    "CVE-2018-11655": {
+        "software": "ImageMagick",
+        "patch": "a7414b7322201a9c8a5cacf563f08468c329b4b1"
+    },
+    "CVE-2015-7763": {
+        "software": "openafs",
+        "patch": "5f70b79817f98b5f482414a4ec849bd4bd15a5d6"
+    },
+    "CVE-2019-9824": {
+        "software": "qemu",
+        "patch": "d3222975c7d6cda9e25809dea05241188457b113"
+    },
+    "CVE-2018-8808": {
+        "software": "radare2",
+        "patch": "a88069940950999d5e2fd16cd7d16c7e956bf516"
+    },
+    "CVE-2018-13096": {
+        "software": "linux",
+        "patch": "e34438c903b653daca2b2a7de95aed46226f8ed3"
+    },
+    "CVE-2017-7394": {
+        "software": "tigervnc",
+        "patch": "62197c89e98be47a174074e4c7429c57767a4929"
+    },
+    "CVE-2018-16392": {
+        "software": "OpenSC",
+        "patch": "360e95d45ac4123255a4c796db96337f332160ad"
+    },
+    "CVE-2020-0141": {
+        "software": "av",
+        "patch": "d09eaeaa4f29bc9732298b1c76af52ad9f35c1cb"
+    },
+    "CVE-2020-15306": {
+        "software": "openexr",
+        "patch": "6a9f8af6e89547bcd370ae3cec2b12849eee0b54"
+    },
+    "CVE-2016-7413": {
+        "software": "php-src",
+        "patch": "b88393f08a558eec14964a55d3c680fe67407712"
+    },
+    "CVE-2016-6254": {
+        "software": "collectd",
+        "patch": "653ab3d8fb89b31f4b6e074d0845bf3ae19c6bda"
+    },
+    "CVE-2019-20159": {
+        "software": "gpac",
+        "patch": "e4c1f09ab9618b6af3bec6b94b8b349f2d01dbf8"
+    },
+    "CVE-2019-17056": {
+        "software": "linux",
+        "patch": "0edc3f703f7bcaf550774b5d43ab727bcd0fe06b"
+    },
+    "CVE-2019-7702": {
+        "software": "binaryen",
+        "patch": "cbb24eb4a0810640c9dcee2f6682c64f9bc6c512"
+    },
+    "CVE-2019-16350": {
+        "software": "ffjpeg",
+        "patch": "b3039ae8022da67078c130bd19bc3008a037adb3"
+    },
+    "CVE-2017-5335": {
+        "software": "gnutls",
+        "patch": "49be4f7b82eba2363bb8d4090950dad976a77a3a"
+    },
+    "CVE-2017-14260": {
+        "software": "Bento4",
+        "patch": "80e00530366671a2b55ffce5c64809e3bf0de533"
+    },
+    "CVE-2017-9143": {
+        "software": "ImageMagick",
+        "patch": "3b0fe05cddd8910f84e51b4d50099702ea45ba4a"
+    },
+    "CVE-2020-0056": {
+        "software": "bt",
+        "patch": "856262c9237db2c48b4a84871b17087b2dd1f2ec"
+    },
+    "CVE-2015-7835": {
+        "software": "xen",
+        "patch": "fe360c90ea13f309ef78810f1a2b92f2ae3b30b8"
+    },
+    "CVE-2017-14926": {
+        "software": "poppler",
+        "patch": "2532df6060092e9fab7f041ae9598aff9cdd94bb"
+    },
+    "CVE-2016-4964": {
+        "software": "qemu",
+        "patch": "06630554ccbdd25780aa03c3548aaff1eb56dffd"
+    },
+    "CVE-2019-12456": {
+        "software": "linux",
+        "patch": "f9e3ebeea4521652318af903cddeaf033527e93e"
+    },
+    "CVE-2017-9865": {
+        "software": "poppler",
+        "patch": "75fff6556eaf0ef3a6fcdef2c2229d0b6d1c58d9"
+    },
+    "CVE-2018-9272": {
+        "software": "wireshark",
+        "patch": "6e3b90824a82724f445a0374e99f0b76e4cf5e8b"
+    },
+    "CVE-2019-12208": {
+        "software": "njs",
+        "patch": "1f4c515f74a71df9d0a40bb786cce7467f0a904e"
+    },
+    "CVE-2019-11839": {
+        "software": "njs",
+        "patch": "b0f23dbc4d4713f65470272768ef79b7cb47db78"
+    },
+    "CVE-2017-15115": {
+        "software": "linux",
+        "patch": "df80cd9b28b9ebaa284a41df611dbf3a2d05ca74"
+    },
+    "CVE-2017-18218": {
+        "software": "linux",
+        "patch": "27463ad99f738ed93c7c8b3e2e5bc8c4853a2ff2"
+    },
+    "CVE-2018-10753": {
+        "software": "abcm2ps",
+        "patch": "fd956e19f88ee32f8ec4aece5901400b06e80bcc"
+    },
+    "CVE-2019-11838": {
+        "software": "njs",
+        "patch": "b0f23dbc4d4713f65470272768ef79b7cb47db78"
+    },
+    "CVE-2018-12248": {
+        "software": "mruby",
+        "patch": "778500563a9f7ceba996937dc886bd8cde29b42b"
+    },
+    "CVE-2020-6840": {
+        "software": "mruby",
+        "patch": "2742ded32fe18f88833d76b297f5c2170b6880c3"
+    },
+    "CVE-2018-1000878": {
+        "software": "libarchive",
+        "patch": "bfcfe6f04ed20db2504db8a254d1f40a1d84eb28"
+    },
+    "CVE-2018-11591": {
+        "software": "Espruino",
+        "patch": "b6d362f6a1f2de0b3e7604848116efb509196bf4"
+    },
+    "CVE-2015-1208": {
+        "software": "ffmpeg",
+        "patch": "3e11a186facfd4f17ce23f462734658d88899b55"
+    },
+    "CVE-2016-8885": {
+        "software": "jasper",
+        "patch": "5d66894d2313e3f3469f19066e149e08ff076698"
+    },
+    "CVE-2016-0815": {
+        "software": "av",
+        "patch": "5403587a74aee2fb57076528c3927851531c8afb"
+    },
+    "CVE-2018-7470": {
+        "software": "ImageMagick",
+        "patch": "9e80713e5132a3bd26702ee0a833306f7e801469"
+    },
+    "CVE-2018-5269": {
+        "software": "opencv",
+        "patch": "8a76fadaa39b87d740ec3346d9eccb64bde5a6af"
+    },
+    "CVE-2019-9771": {
+        "software": "libredwg",
+        "patch": "c6f58bcfe1bf07947a0a7ffed267bada19c82920"
+    },
+    "CVE-2018-21015": {
+        "software": "gpac",
+        "patch": "0545bb0a01bfac6764c43bd5074e9c2d1eae495f"
+    },
+    "CVE-2017-5333": {
+        "software": "icoutils",
+        "patch": "1a108713ac26215c7568353f6e02e727e6d4b24a"
+    },
+    "CVE-2016-2842": {
+        "software": "openssl",
+        "patch": "578b956fe741bf8e84055547b1e83c28dd902c73"
+    },
+    "CVE-2016-3078": {
+        "software": "php-src",
+        "patch": "3bba9c7fbad2c45dfa48f7c52394632c6bd7ebc8"
+    },
+    "CVE-2016-7936": {
+        "software": "tcpdump",
+        "patch": "cb696b8e91d9860dd30ec3b7dcb16424cd6e18ac"
+    },
+    "CVE-2017-17054": {
+        "software": "aubio",
+        "patch": "25ecb7338cebc5b8c79092347839c78349ec33f1"
+    },
+    "CVE-2018-7999": {
+        "software": "graphite",
+        "patch": "db132b4731a9b4c9534144ba3a18e65b390e9ff6"
+    },
+    "CVE-2017-14261": {
+        "software": "Bento4",
+        "patch": "80e00530366671a2b55ffce5c64809e3bf0de533"
+    },
+    "CVE-2017-8830": {
+        "software": "ImageMagick",
+        "patch": "ff2431d8f17d4a7c906438042a649b04aec93558"
+    },
+    "CVE-2019-7153": {
+        "software": "binaryen",
+        "patch": "85e95e315a8023c46eb804fe80ebc244bcfdae3e"
+    },
+    "CVE-2017-1000476": {
+        "software": "ImageMagick",
+        "patch": "f685e1e0afdea91da020ada3fade22621dd459eb"
+    },
+    "CVE-2016-9560": {
+        "software": "jasper",
+        "patch": "1abc2e5a401a4bf1d5ca4df91358ce5df111f495"
+    },
+    "CVE-2016-6306": {
+        "software": "openssl",
+        "patch": "52e623c4cb06fffa9d5e75c60b34b4bc130b12e9"
+    },
+    "CVE-2017-0396": {
+        "software": "av",
+        "patch": "d21cc13ae61b2f452f129efe3ae016200ad7b00b"
+    },
+    "CVE-2017-17914": {
+        "software": "ImageMagick",
+        "patch": "650ec57d84b7b1dce66435b8cd3b58f7ae66db1b"
+    },
+    "CVE-2019-12382": {
+        "software": "linux",
+        "patch": "9f1f1a2dab38d4ce87a13565cf4dc1b73bef3a5f"
+    },
+    "CVE-2018-14445": {
+        "software": "Bento4",
+        "patch": "6acb92d0beaebf5bb46ebc1ae94ddc64a5f0f6d5"
+    },
+    "CVE-2019-17041": {
+        "software": "rsyslog",
+        "patch": "10549ba915556c557b22b3dac7e4cb73ad22d3d8"
+    },
+    "CVE-2017-17934": {
+        "software": "ImageMagick",
+        "patch": "3755d2289b032919c065f6ab11ef570063f7f828"
+    },
+    "CVE-2018-16151": {
+        "software": "strongswan",
+        "patch": "5955db5b124a1ee5f44c0845b6e00c86fddae67c"
+    },
+    "CVE-2019-20168": {
+        "software": "gpac",
+        "patch": "5250afecbc770c8f26829e9566d5b226a3c5fa80"
+    },
+    "CVE-2018-1065": {
+        "software": "linux",
+        "patch": "57ebd808a97d7c5b1e1afb937c2db22beba3c1f8"
+    },
+    "CVE-2016-9389": {
+        "software": "jasper",
+        "patch": "dee11ec440d7908d1daf69f40a3324b27cf213ba"
+    },
+    "CVE-2018-19876": {
+        "software": "cairo",
+        "patch": "90e85c2493fdfa3551f202ff10282463f1e36645"
+    },
+    "CVE-2017-5979": {
+        "software": "zziplib",
+        "patch": "90338371e062eb26d5a5a7bb9c299206d0fef278"
+    },
+    "CVE-2016-4303": {
+        "software": "iperf",
+        "patch": "91f2fa59e8ed80dfbf400add0164ee0e508e412a"
+    },
+    "CVE-2017-15670": {
+        "software": "glibc",
+        "patch": "c369d66e5426a30e4725b100d5cd28e372754f90"
+    },
+    "CVE-2018-5772": {
+        "software": "exiv2",
+        "patch": "ae49250942f4395639961abeed3c15920fcd7241"
+    },
+    "CVE-2020-0048": {
+        "software": "av",
+        "patch": "dc857dc042bc8f111449faffe9a10aed34bfa24c"
+    },
+    "CVE-2016-4421": {
+        "software": "wireshark",
+        "patch": "e86b1e9f557e2cd1ae365dd96623226cff974795"
+    },
+    "CVE-2019-11222": {
+        "software": "gpac",
+        "patch": "f3698bb1bce62402805c3fda96551a23101a32f9"
+    },
+    "CVE-2018-18386": {
+        "software": "linux",
+        "patch": "966031f340185eddd05affcf72b740549f056348"
+    },
+    "CVE-2019-17177": {
+        "software": "FreeRDP",
+        "patch": "9fee4ae076b1ec97b97efb79ece08d1dab4df29a"
+    },
+    "CVE-2019-20164": {
+        "software": "gpac",
+        "patch": "5250afecbc770c8f26829e9566d5b226a3c5fa80"
+    },
+    "CVE-2016-6505": {
+        "software": "wireshark",
+        "patch": "94e97e45cf614c7bb8fe90c23df52910246b2c95"
+    },
+    "CVE-2018-14522": {
+        "software": "aubio",
+        "patch": "99c7aa2e3efec988a5f81018b48d9388ff24bba1"
+    },
+    "CVE-2018-14881": {
+        "software": "tcpdump",
+        "patch": "86326e880d31b328a151d45348c35220baa9a1ff"
+    },
+    "CVE-2017-11537": {
+        "software": "ImageMagick",
+        "patch": "2bbc1b96f0d9371df675fdf7b8fc9bd4a42ae9cd"
+    },
+    "CVE-2018-20749": {
+        "software": "libvncserver",
+        "patch": "15bb719c03cc70f14c36a843dcb16ed69b405707"
+    },
+    "CVE-2015-8738": {
+        "software": "wireshark",
+        "patch": "858c3f0079f987833fb22eba2c361d1a88ba4103"
+    },
+    "CVE-2019-10878": {
+        "software": "ddnet",
+        "patch": "79a6ae6ae9c8db7868d49fa11db15d27d1496858"
+    },
+    "CVE-2019-1010317": {
+        "software": "WavPack",
+        "patch": "f68a9555b548306c5b1ee45199ccdc4a16a6101b"
+    },
+    "CVE-2015-8382": {
+        "software": "php-src",
+        "patch": "c351b47ce85a3a147cfa801fa9f0149ab4160834"
+    },
+    "CVE-2017-18027": {
+        "software": "ImageMagick",
+        "patch": "a43f4155ee916fbed080acd534232a9d2396b5b5"
+    },
+    "CVE-2018-14461": {
+        "software": "tcpdump",
+        "patch": "aa5c6b710dfd8020d2c908d6b3bd41f1da719b3b"
+    },
+    "CVE-2018-10804": {
+        "software": "ImageMagick",
+        "patch": "052f6c22d3a2b2aae9dfa24aff9ccdf8b72ace91"
+    },
+    "CVE-2018-11578": {
+        "software": "ngiflib",
+        "patch": "2cecb536e9a4adf1d4b48579f21fffef5f15c388"
+    },
+    "CVE-2015-8927": {
+        "software": "libarchive",
+        "patch": "eff35d4a23418b5da3c7dfff333941a880b4d936"
+    },
+    "CVE-2019-14464": {
+        "software": "MilkyTracker",
+        "patch": "fd607a3439fcdd0992e5efded3c16fc79c804e34"
+    },
+    "CVE-2019-13636": {
+        "software": "patch",
+        "patch": "dce4683cbbe107a95f1f0d45fabc304acfb5d71a"
+    },
+    "CVE-2016-2225": {
+        "software": "uclibc-ng",
+        "patch": "6932f2282ba0578d6ca2f21eead920d6b78bc93c"
+    },
+    "CVE-2017-9611": {
+        "software": "ghostpdl",
+        "patch": "c7c55972758a93350882c32147801a3485b010fe"
+    },
+    "CVE-2016-8887": {
+        "software": "jasper",
+        "patch": "e24bdc716c3327b067c551bc6cfb97fd2370358d"
+    },
+    "CVE-2019-7703": {
+        "software": "binaryen",
+        "patch": "cbb24eb4a0810640c9dcee2f6682c64f9bc6c512"
+    },
+    "CVE-2019-15922": {
+        "software": "linux",
+        "patch": "58ccd2d31e502c37e108b285bf3d343eb00c235b"
+    },
+    "CVE-2018-14337": {
+        "software": "mruby",
+        "patch": "bfd11aab35ab942363359a989712e9a6f35b9295"
+    },
+    "CVE-2016-7513": {
+        "software": "ImageMagick",
+        "patch": "4fc35e90e200f5cffd0edc3ddce8be5ddea38146"
+    },
+    "CVE-2017-14646": {
+        "software": "Bento4",
+        "patch": "53499d8d4c69142137c7c7f0097a444783fdeb90"
+    },
+    "CVE-2016-4081": {
+        "software": "wireshark",
+        "patch": "42f299be6abb302f32cec78b1c0812364c9f9285"
+    },
+    "CVE-2015-8922": {
+        "software": "libarchive",
+        "patch": "d094dc02905605ca514baf87855f026b9bf52f1f"
+    },
+    "CVE-2015-8926": {
+        "software": "libarchive",
+        "patch": "aab73938f8914f0def6cdd5d5be3f142ae7c77f6"
+    },
+    "CVE-2018-19364": {
+        "software": "qemu",
+        "patch": "5b3c77aa581ebb215125c84b0742119483571e55"
+    },
+    "CVE-2019-12101": {
+        "software": "libnyoci",
+        "patch": "d96723feaf24c260832ad44bb82d9947a9797424"
+    },
+    "CVE-2018-21008": {
+        "software": "linux",
+        "patch": "abd39c6ded9db53aa44c2540092bdd5fb6590fa8"
+    },
+    "CVE-2015-8818": {
+        "software": "qemu",
+        "patch": "b242e0e0e2969c044a318e56f7988bbd84de1f63"
+    },
+    "CVE-2018-9356": {
+        "software": "bt",
+        "patch": "d7d4d5686b2e3c37c7bf10a6a2adff1c95251a13"
+    },
+    "CVE-2017-14230": {
+        "software": "cyrus-imapd",
+        "patch": "afc5e82d4a933e7ead3f89c99b1ae5f776abcbc4"
+    },
+    "CVE-2017-10928": {
+        "software": "ImageMagick",
+        "patch": "787f9dc99c8d186ae26ed53ddec54bd0a6f90852"
+    },
+    "CVE-2019-20014": {
+        "software": "libredwg",
+        "patch": "7f668ee2604067bf9f23b2c2057a4617002096fc"
+    },
+    "CVE-2017-8421": {
+        "software": "binutils-gdb",
+        "patch": "39ff1b79f687b65f4144ddb379f22587003443fb"
+    },
+    "CVE-2018-20362": {
+        "software": "faad2",
+        "patch": "466b01d504d7e45f1e9169ac90b3e34ab94aed14"
+    },
+    "CVE-2019-16903": {
+        "software": "Platinum",
+        "patch": "9a4ceaccb1585ec35c45fd8e2585538fff6a865e"
+    },
+    "CVE-2016-4416": {
+        "software": "wireshark",
+        "patch": "6c91f52e3024a14d52b45f88a306dcbc3ef0afea"
+    },
+    "CVE-2017-8351": {
+        "software": "ImageMagick",
+        "patch": "3af5d736b22bafed9c1ac466f955fb4298395c5a"
+    },
+    "CVE-2017-17862": {
+        "software": "linux",
+        "patch": "c131187db2d3fa2f8bf32fdf4e9a4ef805168467"
+    },
+    "CVE-2017-6838": {
+        "software": "audiofile",
+        "patch": "7d65f89defb092b63bcbc5d98349fb222ca73b3c"
+    },
+    "CVE-2018-14616": {
+        "software": "linux",
+        "patch": "91291e9998d208370eb8156c760691b873bd7522"
+    },
+    "CVE-2016-2538": {
+        "software": "qemu",
+        "patch": "fe3c546c5ff2a6210f9a4d8561cc64051ca8603e"
+    },
+    "CVE-2017-12596": {
+        "software": "openexr",
+        "patch": "f09f5f26c1924c4f7e183428ca79c9881afaf53c"
+    },
+    "CVE-2017-14617": {
+        "software": "poppler",
+        "patch": "939465c40902d72e0c05d4f3a27ee67e4a007ed7"
+    },
+    "CVE-2018-12559": {
+        "software": "cantata",
+        "patch": "afc4f8315d3e96574925fb530a7004cc9e6ce3d3"
+    },
+    "CVE-2020-0055": {
+        "software": "bt",
+        "patch": "10ca85c6bc5a811629bee2f60ee7ab45fef17268"
+    },
+    "CVE-2019-9774": {
+        "software": "libredwg",
+        "patch": "9e662ca7b5703be57d34dd1166997785ade83c27"
+    },
+    "CVE-2016-8691": {
+        "software": "jasper",
+        "patch": "d8c2604cd438c41ec72aff52c16ebd8183068020"
+    },
+    "CVE-2018-5813": {
+        "software": "LibRaw",
+        "patch": "6e245930cece66441f9cce4ccbd61647d7157cce"
+    },
+    "CVE-2017-7624": {
+        "software": "imageworsener",
+        "patch": "49912f8e5706a686212eb9e10fac3e2abe9e1867"
+    },
+    "CVE-2016-10317": {
+        "software": "ghostpdl",
+        "patch": "362ec9daadb9992b0def3520cd1dc6fa52edd1c4"
+    },
+    "CVE-2018-5711": {
+        "software": "libgd",
+        "patch": "a11f47475e6443b7f32d21f2271f28f417e2ac04"
+    },
+    "CVE-2016-10507": {
+        "software": "openjpeg",
+        "patch": "da940424816e11d624362ce080bc026adffa26e8"
+    },
+    "CVE-2015-8924": {
+        "software": "libarchive",
+        "patch": "bb9b157146a62e655fb369b32684398c949fa1b1"
+    },
+    "CVE-2019-13224": {
+        "software": "oniguruma",
+        "patch": "0f7f61ed1b7b697e283e37bd2d731d0bd57adb55"
+    },
+    "CVE-2017-14976": {
+        "software": "poppler",
+        "patch": "da63c35549e8852a410946ab016a3f25ac701bdf"
+    },
+    "CVE-2017-17805": {
+        "software": "linux",
+        "patch": "ecaaab5649781c5a0effdaf298a925063020500e"
+    },
+    "CVE-2018-10289": {
+        "software": "mupdf",
+        "patch": "2e43685dc8a8a886fc9df9b3663cf199404f7637"
+    },
+    "CVE-2016-0704": {
+        "software": "openssl",
+        "patch": "ae50d8270026edf5b3c7f8aaa0c6677462b33d97"
+    },
+    "CVE-2016-10159": {
+        "software": "php-src",
+        "patch": "ca46d0acbce55019b970fcd4c1e8a10edfdded93"
+    },
+    "CVE-2019-20169": {
+        "software": "gpac",
+        "patch": "a8b6246da925cf744805c9427a01fcacb53314bb"
+    },
+    "CVE-2018-14435": {
+        "software": "ImageMagick",
+        "patch": "957b6397b958a5881005df27eb97319b3175a3c9"
+    },
+    "CVE-2018-12233": {
+        "software": "linux",
+        "patch": "ba4dbdedd3edc2798659bcd8b1a184ea8bdd04dc"
+    },
+    "CVE-2018-9135": {
+        "software": "ImageMagick",
+        "patch": "361ed689cc8e56fd125f9d0d6508e9eb303bdca6"
+    },
+    "CVE-2017-12640": {
+        "software": "ImageMagick",
+        "patch": "307fa45d512641fcd105f0d57ca50c1437cd1b81"
+    },
+    "CVE-2019-19948": {
+        "software": "ImageMagick",
+        "patch": "6ae32a9038e360b3491969d5d03d490884f02b4c"
+    },
+    "CVE-2017-5548": {
+        "software": "linux",
+        "patch": "05a974efa4bdf6e2a150e3f27dc6fcf0a9ad5655"
+    },
+    "CVE-2017-9116": {
+        "software": "openexr",
+        "patch": "f09f5f26c1924c4f7e183428ca79c9881afaf53c"
+    },
+    "CVE-2020-15503": {
+        "software": "LibRaw",
+        "patch": "20ad21c0d87ca80217aee47533d91e633ce1864d"
+    },
+    "CVE-2018-19626": {
+        "software": "wireshark",
+        "patch": "c5a65115ebab55cfd5ce0a855c2256e01cab6449"
+    },
+    "CVE-2016-9821": {
+        "software": "libav",
+        "patch": "97b94eb77d16cb25a2a601ea9b59fc2ef94c3e05"
+    },
+    "CVE-2016-0740": {
+        "software": "Pillow",
+        "patch": "717720b0516b5e94b18dcc0a4383d56fe03f0db9"
+    },
+    "CVE-2016-7132": {
+        "software": "php-src",
+        "patch": "5a34bd6d1e6b4d31221c50bcf477c9508553a646"
+    },
+    "CVE-2016-5767": {
+        "software": "php-src",
+        "patch": "c395c6e5d7e8df37a21265ff76e48fe75ceb5ae6"
+    },
+    "CVE-2019-12978": {
+        "software": "ImageMagick",
+        "patch": "ee60b346b8fce70eb3b239a78e2486fba9615069"
+    },
+    "CVE-2018-1000100": {
+        "software": "gpac",
+        "patch": "90dc7f853d31b0a4e9441cba97feccf36d8b69a4"
+    },
+    "CVE-2018-14465": {
+        "software": "tcpdump",
+        "patch": "bea2686c296b79609060a104cc139810785b0739"
+    },
+    "CVE-2017-14342": {
+        "software": "ImageMagick",
+        "patch": "4e378ea8fb99e869768f34e900105e8c769adfcd"
+    },
+    "CVE-2019-20161": {
+        "software": "gpac",
+        "patch": "7a09732d4978586e6284e84caa9c301b2fa5e956"
+    },
+    "CVE-2016-5096": {
+        "software": "php-src",
+        "patch": "abd159cce48f3e34f08e4751c568e09677d5ec9c"
+    },
+    "CVE-2019-11221": {
+        "software": "gpac",
+        "patch": "f4616202e5578e65746cf7e7ceeba63bee1b094b"
+    },
+    "CVE-2015-1792": {
+        "software": "openssl",
+        "patch": "cd30f03ac5bf2962f44bd02ae8d88245dff2f12c"
+    },
+    "CVE-2019-19931": {
+        "software": "libiec61850",
+        "patch": "23e381fa76d55554da5eed257f3889763801777d"
+    },
+    "CVE-2018-11726": {
+        "software": "libmobi",
+        "patch": "6904ebc247f01b5fe27d58c5dbb27e38af8449fb"
+    },
+    "CVE-2019-15146": {
+        "software": "gpmf-parser",
+        "patch": "341f12cd5b97ab419e53853ca00176457c9f1681"
+    },
+    "CVE-2020-7053": {
+        "software": "linux",
+        "patch": "7dc40713618c884bf07c030d1ab1f47a9dc1f310"
+    },
+    "CVE-2016-2841": {
+        "software": "qemu",
+        "patch": "415ab35a441eca767d033a2702223e785b9d5190"
+    },
+    "CVE-2017-5486": {
+        "software": "tcpdump",
+        "patch": "b553848e3e2c0c466f65ab14e253af91467e561a"
+    },
+    "CVE-2016-5116": {
+        "software": "libgd",
+        "patch": "4dc1a2d7931017d3625f2d7cff70a17ce58b53b4"
+    },
+    "CVE-2016-10249": {
+        "software": "jasper",
+        "patch": "988f8365f7d8ad8073b6786e433d34c553ecf568"
+    },
+    "CVE-2016-6238": {
+        "software": "lepton",
+        "patch": "3a0cd559da9f5ab61f206eadb05a0bb4a0dec1ad"
+    },
+    "CVE-2017-17669": {
+        "software": "exiv2",
+        "patch": "5f360a99af83bd44d269e8fce6f48f375094f5a3"
+    },
+    "CVE-2019-12106": {
+        "software": "miniupnp",
+        "patch": "cd506a67e174a45c6a202eff182a712955ed6d6f"
+    },
+    "CVE-2018-18016": {
+        "software": "ImageMagick",
+        "patch": "df8a62fe4938aa41a39e815937c58bc0ed21b664"
+    },
+    "CVE-2019-10873": {
+        "software": "poppler",
+        "patch": "8dbe2e6c480405dab9347075cf4be626f90f1d05"
+    },
+    "CVE-2019-13616": {
+        "software": "SDL",
+        "patch": "93f43f46d23d9b578a5b93bea5182b1ee6de8d97"
+    },
+    "CVE-2016-8692": {
+        "software": "jasper",
+        "patch": "d8c2604cd438c41ec72aff52c16ebd8183068020"
+    },
+    "CVE-2017-5130": {
+        "software": "libxml2",
+        "patch": "897dffbae322b46b83f99a607d527058a72c51ed"
+    },
+    "CVE-2016-9104": {
+        "software": "qemu",
+        "patch": "7e55d65c56a03dcd2c5d7c49d37c5a74b55d4bd6"
+    },
+    "CVE-2019-7559": {
+        "software": "btor2tools",
+        "patch": "c38dd5dc89f6bfa35810e3f648bb10f8ad824b39"
+    },
+    "CVE-2016-1684": {
+        "software": "libxslt",
+        "patch": "91d0540ac9beaa86719a05b749219a69baa0dd8d"
+    },
+    "CVE-2018-12247": {
+        "software": "mruby",
+        "patch": "55edae0226409de25e59922807cb09acb45731a2"
+    },
+    "CVE-2017-16995": {
+        "software": "linux",
+        "patch": "95a762e2c8c942780948091f8f2a4f32fce1ac6f"
+    },
+    "CVE-2018-7333": {
+        "software": "wireshark",
+        "patch": "bd6313181317bfe83842b27650b65f3c2b8d5dc9"
+    },
+    "CVE-2020-0079": {
+        "software": "av",
+        "patch": "8464bfa975afe360bb8e3dd59c036ce4a4995fa8"
+    },
+    "CVE-2018-11656": {
+        "software": "ImageMagick",
+        "patch": "caedfada2addf611eebb8c88477a47c6c2f641ca"
+    },
+    "CVE-2017-17760": {
+        "software": "opencv",
+        "patch": "7bbe1a53cfc097b82b1589f7915a2120de39274c"
+    },
+    "CVE-2017-5209": {
+        "software": "libplist",
+        "patch": "3a55ddd3c4c11ce75a86afbefd085d8d397ff957"
+    },
+    "CVE-2019-15099": {
+        "software": "linux",
+        "patch": "bfd6e6e6c5d2ee43a3d9902b36e01fc7527ebb27"
+    },
+    "CVE-2017-14607": {
+        "software": "ImageMagick",
+        "patch": "60e52517ff86a451a85cac3eaba2016e80668297"
+    },
+    "CVE-2018-20763": {
+        "software": "gpac",
+        "patch": "1c449a34fe0b50aaffb881bfb9d7c5ab0bb18cdd"
+    },
+    "CVE-2018-16640": {
+        "software": "ImageMagick",
+        "patch": "76efa969342568841ecf320b5a041685a6d24e0b"
+    },
+    "CVE-2017-5993": {
+        "software": "virglrenderer",
+        "patch": "6eb13f7a2dcf391ec9e19b4c2a79e68305f63c22"
+    },
+    "CVE-2018-15560": {
+        "software": "pycryptodome",
+        "patch": "d1739c62b9b845f8a5b342de08d6bf6e2722d247"
+    },
+    "CVE-2020-0059": {
+        "software": "bt",
+        "patch": "9e65c24322faa3b5a6274ffd6d404b98d6e7b5ad"
+    },
+    "CVE-2016-8632": {
+        "software": "linux",
+        "patch": "3de81b758853f0b29c61e246679d20b513c4cfec"
+    },
+    "CVE-2017-13032": {
+        "software": "tcpdump",
+        "patch": "027433c0d862c3699635944f4240628ba44d8341"
+    },
+    "CVE-2017-12642": {
+        "software": "ImageMagick",
+        "patch": "46bcb8a86801d3d9c3f89ec1c01fa8a98da05645"
+    },
+    "CVE-2016-7531": {
+        "software": "ImageMagick",
+        "patch": "fcfb131bac9e640dfec3938a2cd4605e96b92e08"
+    },
+    "CVE-2018-17097": {
+        "software": "soundtouch",
+        "patch": "09e04252dde9ef02a7d254315b13089996afe302"
+    },
+    "CVE-2020-13800": {
+        "software": "qemu",
+        "patch": "a98610c429d52db0937c1e48659428929835c455"
+    },
+    "CVE-2017-12863": {
+        "software": "opencv",
+        "patch": "999f41fb4f4aa94a0cb47256919ae8b5c29ca5f3"
+    },
+    "CVE-2017-7396": {
+        "software": "tigervnc",
+        "patch": "dccb5f7d776e93863ae10bbff56a45c523c6eeb0"
+    },
+    "CVE-2020-13111": {
+        "software": "naviserver",
+        "patch": "a5c3079f1d8996d5f34c9384a440acf3519ca3bb"
+    },
+    "CVE-2019-19768": {
+        "software": "linux",
+        "patch": "c780e86dd48ef6467a1146cf7d0fe1e05a635039"
+    },
+    "CVE-2019-12483": {
+        "software": "gpac",
+        "patch": "f40aaaf959d4d1f7fa0dcd04c0666592e615c8f1"
+    },
+    "CVE-2019-15026": {
+        "software": "memcached",
+        "patch": "554b56687a19300a75ec24184746b5512580c819"
+    },
+    "CVE-2019-2096": {
+        "software": "av",
+        "patch": "40e32d5e91c7bb9b1b82f291fcf66db887f45f2c"
+    },
+    "CVE-2019-14975": {
+        "software": "mupdf",
+        "patch": "97096297d409ec6f206298444ba00719607e8ba8"
+    },
+    "CVE-2017-7863": {
+        "software": "FFmpeg",
+        "patch": "e477f09d0b3619f3d29173b2cd593e17e2d1978e"
+    },
+    "CVE-2020-0094": {
+        "software": "av",
+        "patch": "2bd6a50aca056f2702004acec2bc8627f28d90b3"
+    },
+    "CVE-2017-9211": {
+        "software": "linux",
+        "patch": "9933e113c2e87a9f46a40fde8dafbf801dca1ab9"
+    },
+    "CVE-2020-6630": {
+        "software": "gpac",
+        "patch": "c7e46e948ebe2d4a532539c7e714cdf655b84521"
+    },
+    "CVE-2017-12604": {
+        "software": "opencv",
+        "patch": "0d854db361106dfcb055231fd0112c5b85ef2287"
+    },
+    "CVE-2016-7156": {
+        "software": "qemu",
+        "patch": "49adc5d3f8c6bb75e55ebfeab109c5c37dea65e8"
+    },
+    "CVE-2019-1010302": {
+        "software": "jhead",
+        "patch": "da30e77ff73181573b1f9262e91e0168c7cbd888"
+    },
+    "CVE-2018-9268": {
+        "software": "wireshark",
+        "patch": "c69d710d2bf39fe633800db65efddf55701131b6"
+    },
+    "CVE-2016-7177": {
+        "software": "wireshark",
+        "patch": "2e37b271c473e1cbd01d62ebe1f3b011fc9fe638"
+    },
+    "CVE-2017-5546": {
+        "software": "linux",
+        "patch": "c4e490cf148e85ead0d1b1c2caaba833f1d5b29f"
+    },
+    "CVE-2017-7940": {
+        "software": "imageworsener",
+        "patch": "5fa486466630a9677b86c1d4cbfd9a5ff76cb33b"
+    },
+    "CVE-2018-20430": {
+        "software": "libextractor",
+        "patch": "b405d707b36e0654900cba78e89f49779efea110"
+    },
+    "CVE-2015-8617": {
+        "software": "php-src",
+        "patch": "b101a6bbd4f2181c360bd38e7683df4a03cba83e"
+    },
+    "CVE-2019-1010057": {
+        "software": "nfdump",
+        "patch": "9f0fe9563366f62a71d34c92229da3432ec5cf0e"
+    },
+    "CVE-2018-20459": {
+        "software": "radare2",
+        "patch": "e5c14c167b0dcf0a53d76bd50bacbbcc0dfc1ae7"
+    },
+    "CVE-2017-18212": {
+        "software": "jerryscript",
+        "patch": "c429530d02347431856fa0bfa1c161c6f3b6953a"
+    },
+    "CVE-2018-8754": {
+        "software": "libevt",
+        "patch": "9d2cc3ca0a1612a6b271abcacffc2e3eea42925e"
+    },
+    "CVE-2016-2449": {
+        "software": "av",
+        "patch": "a4996d9f0edece83bcb7ea85a8dae0e90a9221d1"
+    },
+    "CVE-2016-7179": {
+        "software": "wireshark",
+        "patch": "3b97fbddc23c065727b0147aab52a27c4aadffe7"
+    },
+    "CVE-2019-12482": {
+        "software": "gpac",
+        "patch": "f40aaaf959d4d1f7fa0dcd04c0666592e615c8f1"
+    },
+    "CVE-2015-8932": {
+        "software": "libarchive",
+        "patch": "f0b1dbbc325a2d922015eee402b72edd422cb9ea"
+    },
+    "CVE-2017-15189": {
+        "software": "wireshark",
+        "patch": "625bab309d9dd21db2d8ae2aa3511810d32842a8"
+    },
+    "CVE-2015-3815": {
+        "software": "wireshark",
+        "patch": "b3b1f7c3aa2233a147294bad833b748d38fba84d"
+    },
+    "CVE-2018-12495": {
+        "software": "discount",
+        "patch": "b002a5a4db31e42dfb45451c059bc56941c17974"
+    },
+    "CVE-2018-20458": {
+        "software": "radare2",
+        "patch": "30f4c7b52a4e2dc0d0b1bae487d90f5437c69d19"
+    },
+    "CVE-2018-11645": {
+        "software": "ghostpdl",
+        "patch": "b60d50b7567369ad856cebe1efb6cd7dd2284219"
+    },
+    "CVE-2017-14136": {
+        "software": "opencv",
+        "patch": "aacae2065744adb05e858d327198c7bbe7f452b0"
+    },
+    "CVE-2018-17043": {
+        "software": "doc2txt",
+        "patch": "02b3f030df73846ece8c9fbb3cf3a2cf2cc6e904"
+    },
+    "CVE-2018-19888": {
+        "software": "faac",
+        "patch": "bdb83a630e3c0c5b91481336e74951806efea534"
+    },
+    "CVE-2017-11539": {
+        "software": "ImageMagick",
+        "patch": "36aad912d1f405a28a9a1204120b569e7da5898e"
+    },
+    "CVE-2017-9762": {
+        "software": "radare2",
+        "patch": "f85bc674b2a2256a364fe796351bc1971e106005"
+    },
+    "CVE-2020-13631": {
+        "software": "sqlite",
+        "patch": "3d863b5e4efb2305d64f87a2128289d1c3ce09b6"
+    },
+    "CVE-2018-20551": {
+        "software": "poppler",
+        "patch": "7f87dc10b6adccd6d1b977a28b064add254aa2da"
+    },
+    "CVE-2018-14436": {
+        "software": "ImageMagick",
+        "patch": "4b352c0be410ad900469a079e389178f878aded8"
+    },
+    "CVE-2017-0400": {
+        "software": "av",
+        "patch": "3d16a9c4b4415b5009e5b3733c4933f5cd4c8193"
+    },
+    "CVE-2019-6976": {
+        "software": "libvips",
+        "patch": "00622428bda8d7521db8d74260b519fa41d69d0a"
+    },
+    "CVE-2019-15098": {
+        "software": "linux",
+        "patch": "39d170b3cb62ba98567f5c4f40c27b5864b304e5"
+    },
+    "CVE-2017-9114": {
+        "software": "openexr",
+        "patch": "f09f5f26c1924c4f7e183428ca79c9881afaf53c"
+    },
+    "CVE-2016-7131": {
+        "software": "php-src",
+        "patch": "5a34bd6d1e6b4d31221c50bcf477c9508553a646"
+    },
+    "CVE-2018-20502": {
+        "software": "Bento4",
+        "patch": "b8830036c76f3dedbbaafeaba1a9f23b6fd83485"
+    },
+    "CVE-2019-14497": {
+        "software": "MilkyTracker",
+        "patch": "ea7772a3fae0a9dd0a322e8fec441d15843703b7"
+    },
+    "CVE-2017-10929": {
+        "software": "radare2",
+        "patch": "c57997e76ec70862174a1b3b3aeb62a6f8570e85"
+    },
+    "CVE-2017-11724": {
+        "software": "ImageMagick",
+        "patch": "4b9eeffe5b159ab5de3b3e1487c5e8bca8d0db39"
+    },
+    "CVE-2017-14055": {
+        "software": "FFmpeg",
+        "patch": "6b004e23d7fcdd3c69717bc12e6dcc070ab563b2"
+    },
+    "CVE-2018-7328": {
+        "software": "wireshark",
+        "patch": "69d09028c956f6e049145485ce9b3e2858789b2b"
+    },
+    "CVE-2017-14859": {
+        "software": "exiv2",
+        "patch": "549cac47af7e0e5762b164512eff30d116bd4f2c"
+    },
+    "CVE-2017-9250": {
+        "software": "jerryscript",
+        "patch": "e58f2880df608652aff7fd35c45b242467ec0e79"
+    },
+    "CVE-2019-10149": {
+        "software": "exim",
+        "patch": "d740d2111f189760593a303124ff6b9b1f83453d"
+    },
+    "CVE-2016-6511": {
+        "software": "wireshark",
+        "patch": "56706427f53cc64793870bf072c2c06248ae88f3"
+    },
+    "CVE-2017-12678": {
+        "software": "taglib",
+        "patch": "cb9f07d9dcd791b63e622da43f7b232adaec0a9a"
+    },
+    "CVE-2019-10877": {
+        "software": "teeworlds",
+        "patch": "d25869626a8cfbdd320929ba93ce73abed1402ce"
+    },
+    "CVE-2019-2185": {
+        "software": "av",
+        "patch": "5af096cb013b392ee594dc61140a61513fca97da"
+    },
+    "CVE-2018-11576": {
+        "software": "ngiflib",
+        "patch": "be4c7dffdcf7543fe24acc7448d6014a939fd26b"
+    },
+    "CVE-2016-5352": {
+        "software": "wireshark",
+        "patch": "b6d838eebf4456192360654092e5587c5207f185"
+    },
+    "CVE-2018-12633": {
+        "software": "linux",
+        "patch": "bd23a7269834dc7c1f93e83535d16ebc44b75eba"
+    },
+    "CVE-2018-11251": {
+        "software": "ImageMagick",
+        "patch": "73fbc6a557b4f63af18b2debe83f817859ef7481"
+    },
+    "CVE-2018-19625": {
+        "software": "wireshark",
+        "patch": "dc4d209f39132a4ae05675a11609176ae9705cfc"
+    },
+    "CVE-2018-11378": {
+        "software": "radare2",
+        "patch": "bd276ef2fd8ac3401e65be7c126a43175ccfbcd7"
+    },
+    "CVE-2017-18017": {
+        "software": "linux",
+        "patch": "2638fd0f92d4397884fd991d8f4925cb3f081901"
+    },
+    "CVE-2019-9144": {
+        "software": "exiv2",
+        "patch": "4c28673b641d7eacb50baafb5c286f6900ce2002"
+    },
+    "CVE-2016-4571": {
+        "software": "mxml",
+        "patch": "5f74dc212497332d05882660db130a37d2f458eb"
+    },
+    "CVE-2016-6516": {
+        "software": "linux",
+        "patch": "10eec60ce79187686e052092e5383c99b4420a20"
+    },
+    "CVE-2017-18202": {
+        "software": "linux",
+        "patch": "687cb0884a714ff484d038e9190edc874edcf146"
+    },
+    "CVE-2017-9265": {
+        "software": "ovs",
+        "patch": "1752ea92dc11935e0595d208fdfe8203baf5b55c"
+    },
+    "CVE-2018-20534": {
+        "software": "libsolv",
+        "patch": "4830af9d979d3685de538b80fbeba51ad590525e"
+    },
+    "CVE-2015-3416": {
+        "software": "sqlite",
+        "patch": "74b42275eca70ba323730c5a1088f1baf9937383"
+    },
+    "CVE-2018-20186": {
+        "software": "Bento4",
+        "patch": "f7ba0dca622837bfab063e500f6013640e8e76e4"
+    },
+    "CVE-2016-6161": {
+        "software": "libgd",
+        "patch": "82b80dcb70a7ca8986125ff412bceddafc896842"
+    },
+    "CVE-2018-14543": {
+        "software": "Bento4",
+        "patch": "96b522a1ff5e726d20ee09298de59a7e1fe64ed4"
+    },
+    "CVE-2018-18225": {
+        "software": "wireshark",
+        "patch": "5a2aafef7a8ad4b3917823133c2e3534951fc4d3"
+    },
+    "CVE-2016-4482": {
+        "software": "linux",
+        "patch": "681fef8380eb818c0b845fca5d2ab1dcbab114ee"
+    },
+    "CVE-2015-6838": {
+        "software": "php-src",
+        "patch": "1744be2d17befc69bf00033993f4081852a747d6"
+    },
+    "CVE-2019-19923": {
+        "software": "sqlite",
+        "patch": "396afe6f6aa90a31303c183e11b2b2d4b7956b35"
+    },
+    "CVE-2017-12995": {
+        "software": "tcpdump",
+        "patch": "3a76fd7c95fced2c2f8c8148a9055c3a542eff29"
+    },
+    "CVE-2019-13362": {
+        "software": "codedoc",
+        "patch": "19532db97af1eccb1ed74b7ea4c41eb822ae9964"
+    },
+    "CVE-2019-13390": {
+        "software": "ffmpeg",
+        "patch": "9b236547f480a012cab32f8cad2dfe02774537c1"
+    },
+    "CVE-2018-17582": {
+        "software": "tcpreplay",
+        "patch": "68f67b1a3a4d319543692afb5bd5b191ec984287"
+    },
+    "CVE-2019-12495": {
+        "software": "tinycc",
+        "patch": "d04ce7772c2bc2781ab2502e0b1f1964488814b5"
+    },
+    "CVE-2020-6631": {
+        "software": "gpac",
+        "patch": "c7e46e948ebe2d4a532539c7e714cdf655b84521"
+    },
+    "CVE-2019-15139": {
+        "software": "ImageMagick",
+        "patch": "c78993d138bf480ab4652b5a48379d4ff75ba5f7"
+    },
+    "CVE-2017-11531": {
+        "software": "ImageMagick",
+        "patch": "1885ab1231e82f90d3f0e839555ee3e1a441bbf8"
+    },
+    "CVE-2017-9262": {
+        "software": "ImageMagick",
+        "patch": "e812d4b0eedb940dcdab3f73dfa04c6b21cc1000"
+    },
+    "CVE-2017-13052": {
+        "software": "tcpdump",
+        "patch": "7a7f71ee3f77b8ac08f2f4f7747ce8b8fa5b91f9"
+    },
+    "CVE-2018-20348": {
+        "software": "libpff",
+        "patch": "7f214590075f00593374ee6f8dfc7043ba25ce12"
+    },
+    "CVE-2019-15757": {
+        "software": "cdemu",
+        "patch": "bf3f34641ca20ac502f0145c31ee474503ff6e43"
+    },
+    "CVE-2020-9273": {
+        "software": "proftpd",
+        "patch": "929d6c5a107ad92705555a87c386abd8bdce5d0d"
+    },
+    "CVE-2019-1010069": {
+        "software": "abcm2ps",
+        "patch": "08aef597656d065e86075f3d53fda89765845eae"
+    },
+    "CVE-2019-20171": {
+        "software": "gpac",
+        "patch": "2bcca3f1d4605100bb27d3ed7be25b53cddbc75c"
+    },
+    "CVE-2018-10074": {
+        "software": "linux",
+        "patch": "9903e41ae1f5d50c93f268ca3304d4d7c64b9311"
+    },
+    "CVE-2016-1645": {
+        "software": "openjpeg",
+        "patch": "ccd9ced49ea66f31b1d3d9dd07f4438fa94db328"
+    },
+    "CVE-2015-8873": {
+        "software": "php-src",
+        "patch": "4d2278143a08b7522de9471d0f014d7357c28fea"
+    },
+    "CVE-2017-9439": {
+        "software": "ImageMagick",
+        "patch": "3690a8209202d2c50f5e4661d68fd49c3f1024e4"
+    },
+    "CVE-2016-7911": {
+        "software": "linux",
+        "patch": "8ba8682107ee2ca3347354e018865d8e1967c5f4"
+    },
+    "CVE-2018-7553": {
+        "software": "sam2p",
+        "patch": "2ca32ec848fd97074367bc26b239fa25bbf0e720"
+    },
+    "CVE-2017-13760": {
+        "software": "sleuthkit",
+        "patch": "ed2072153ad5168635b309d3308190c9e28c1c1c"
+    },
+    "CVE-2019-9686": {
+        "software": "pacman",
+        "patch": "d197d8ab82cf10650487518fb968067897a12775"
+    },
+    "CVE-2018-9256": {
+        "software": "wireshark",
+        "patch": "1592587e6f9fd8c8aa8fc7f67989690d0c6882c4"
+    },
+    "CVE-2015-8720": {
+        "software": "wireshark",
+        "patch": "921bb07115fbffc081ec56a5022b4a9d58db6d39"
+    },
+    "CVE-2017-9754": {
+        "software": "binutils-gdb",
+        "patch": "04f963fd489cae724a60140e13984415c205f4ac"
+    },
+    "CVE-2019-20095": {
+        "software": "linux",
+        "patch": "003b686ace820ce2d635a83f10f2d7f9c147dabc"
+    },
+    "CVE-2019-6498": {
+        "software": "gattlib",
+        "patch": "60b813a770e42fdb0e85c1d2da7a55327784b8d6"
+    },
+    "CVE-2016-4302": {
+        "software": "libarchive",
+        "patch": "05caadc7eedbef471ac9610809ba683f0c698700"
+    },
+    "CVE-2018-11357": {
+        "software": "wireshark",
+        "patch": "d80acae40d14efeb857258ca923637b590dd6be9"
+    },
+    "CVE-2019-11577": {
+        "software": "dhcpcd",
+        "patch": "8d11b33f6c60e2db257130fa383ba76b6018bcf6"
+    },
+    "CVE-2017-6851": {
+        "software": "jasper",
+        "patch": "88a4f02f5b7e5233b3c474669e8e49d46f36994a"
+    },
+    "CVE-2018-10548": {
+        "software": "php-src",
+        "patch": "49782c54994ecca2ef2a061063bd5a7079c43527"
+    },
+    "CVE-2017-7700": {
+        "software": "wireshark",
+        "patch": "8fc0af859de4993951a915ad735be350221f3f53"
+    },
+    "CVE-2018-11354": {
+        "software": "wireshark",
+        "patch": "cb517a4a434387e74a2f75ebb106ee3c3893251c"
+    },
+    "CVE-2018-9257": {
+        "software": "wireshark",
+        "patch": "b4498c964f58a241e0706e19391c8c300dfa0395"
+    },
+    "CVE-2016-9395": {
+        "software": "jasper",
+        "patch": "d42b2388f7f8e0332c846675133acea151fc557a"
+    },
+    "CVE-2019-19525": {
+        "software": "linux",
+        "patch": "7fd25e6fc035f4b04b75bca6d7e8daa069603a76"
+    },
+    "CVE-2019-7398": {
+        "software": "ImageMagick",
+        "patch": "f14f66d2a2cca4d43faa2b181af9f6f4037621d9"
+    },
+    "CVE-2016-10375": {
+        "software": "yodl",
+        "patch": "fd85f8c94182558ff1480d06a236d6fb927979a3"
+    },
+    "CVE-2018-14471": {
+        "software": "libredwg",
+        "patch": "7bb6307da56c753b962de127a43ebde3e621ecbb"
+    },
+    "CVE-2016-8689": {
+        "software": "libarchive",
+        "patch": "7f17c791dcfd8c0416e2cd2485b19410e47ef126"
+    },
+    "CVE-2017-6355": {
+        "software": "virglrenderer",
+        "patch": "93761787b29f37fa627dea9082cdfc1a1ec608d6"
+    },
+    "CVE-2017-18550": {
+        "software": "linux",
+        "patch": "342ffc26693b528648bdc9377e51e4f2450b4860"
+    },
+    "CVE-2018-17282": {
+        "software": "exiv2",
+        "patch": "670fb73dd5ee8acab90971c4878de29f9fc43a02"
+    },
+    "CVE-2015-4470": {
+        "software": "libmspack",
+        "patch": "3673b713d15bbd3ce564b8e313a121bad23aa362"
+    },
+    "CVE-2015-7504": {
+        "software": "qemu",
+        "patch": "837f21aacf5a714c23ddaadbbc5212f9b661e3f7"
+    }
+}
