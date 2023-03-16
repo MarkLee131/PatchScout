@@ -1,7 +1,7 @@
 from ctypes import POINTER
 import math
 import sys
-from util import *
+from analyze.PatchScout.utils import *
 from encoding_module import *
 import pandas as pd
 import numpy as np

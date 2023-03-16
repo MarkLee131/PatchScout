@@ -7,7 +7,7 @@ import shutil
 import pandas as pd
 from collections import Counter
 import json
-from util import *
+from utils import *
 
 gitpath = "/home/kaixuan_cuda11/patch_match/analyze/VCMatch/gitrepo/"
 
