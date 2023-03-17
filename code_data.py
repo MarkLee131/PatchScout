@@ -61,23 +61,6 @@ if __name__ == '__main__':
     
     df = pd.read_csv("/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/drop_diffna.csv")
     df = reduce_mem_usage(df)
-    # cve_df = pd.read_csv("/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/cve_info.csv")
-    # cve_df = reduce_mem_usage(cve_df)
-    
-    # repos = cve_df.repo.unique()
-
-    # code_data_path = '/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/code_data'
-    # if not os.path.exists(code_data_path):
-    #     os.makedirs(code_data_path)
-
-    # for reponame in repos:
-    #     savepath = code_data_path+'/code_data_' + reponame + '.csv'
-    #     if os.path.exists(savepath):
-    #         continue
-
-        # print(reponame+" is processing...")
-        
-        # commits = df[df.repo == reponame].commit.unique()
     savepath = '/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/code_data.csv'
     cves = df['cve'].tolist()
     commits = df['commit_id'].tolist()
