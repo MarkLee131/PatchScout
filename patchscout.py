@@ -260,17 +260,6 @@ cvelist = df.cve.unique()
 
 kf = KFold(n_splits=5, shuffle=True)
 
-
-feature_cols = ['addcnt', 'delcnt', 'totalcnt', 'issue_cnt', 'web_cnt', 'bug_cnt', 'cve_cnt',
-                'time_dis', 'inter_token_cwe_cnt', 'inter_token_cwe_ratio', 'vuln_commit_tfidf',
-                'cve_match', 'bug_match', 'func_same_cnt', 'func_same_ratio', 'func_unrelated_cnt',
-                'filepath_same_cnt', 'filepath_same_ratio', 'filepath_unrelated_cnt',
-                'file_same_cnt', 'file_same_ratio', 'file_unrelated_cnt', 'patchlike', 'vuln_type_1',
-                'vuln_type2', 'vuln_type3', 'mess_shared_num', 'mess_shared_ratio',
-                'mess_max', 'mess_sum', 'mess_mean', 'mess_var', 'code_shared_num',
-                'code_shared_ratio', 'code_max', 'code_sum', 'code_mean', 'code_var']
-vuln_cols = ['vuln_emb' + str(i) for i in range(32)]
-cmt_cols = ['cmt_emb' + str(i) for i in range(32)]
 ps_cols = ['cve_match', 'bug_match', 'func_same_cnt', 'func_same_ratio', 'func_unrelated_cnt',
            'filepath_same_cnt', 'filepath_same_ratio', 'filepath_unrelated_cnt',
            'file_same_cnt', 'file_same_ratio', 'file_unrelated_cnt', 'patchlike', 'vuln_type_1',
@@ -297,10 +286,6 @@ for idx, (train_index, test_index) in enumerate(kf.split(cvelist)):
     note = 'idx_'+str(idx) # fix: revert the type of idx: int to str
     # encoding(tmp_train, tmp_test, note)
     outpath = '../data/encode/'
-    train[vuln_cols] = readfile(outpath + 'vuln_embedding_train')
-    train[cmt_cols] = readfile(outpath + 'commit_embedding_train')
-    test[vuln_cols] = readfile(outpath + 'vuln_embedding_test')
-    test[cmt_cols] = readfile(outpath + 'commit_embedding_test')
     
     feature_df = pd.read_csv('../data/Dataset_feature.csv')
     ps_df = pd.read_csv('../data/Dataset_5000_FFmpeg.csv')
