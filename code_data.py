@@ -5,27 +5,6 @@ from multiprocessing import Pool
 from utils import *
 warnings.filterwarnings("ignore")
 
-# =============== code_data =============== 
-
-### process code data, to obtain the code information of each commit.
-### 'commit', 'code_files', 'code_filepaths', 'code_funcs'
-
-# ### TODO: need to change the logic of this part: we already have the diff.
-# def get_code_info(repo, commit):
-#     outputs = repo.git.diff(commit + '~1',
-#                             commit,
-#                             ignore_blank_lines=True,
-#                             ignore_space_at_eol=True).split('\n')
-#     files, filepaths, funcs = [], [], []
-#     for line in outputs:
-#         if line.startswith('diff --git'):
-#             line = line.lower()
-#             files.append(line.split(' ')[-1].strip().split('/')[-1])
-#             filepaths.append(line.split(" ")[-1].strip())
-#         elif line.startswith('@@ '):
-#             line = line.lower()
-#             funcs.append(line.split('@@')[-1].strip())            
-#     return [commit, files, filepaths, funcs]
 
 def get_code_info(cve, commit, diff):
     files, filepaths, funcs = [], [], []

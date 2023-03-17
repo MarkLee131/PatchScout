@@ -9,7 +9,6 @@ from nltk.corpus import stopwords
 from utils import *
 warnings.filterwarnings("ignore")
 
-# =============== commit_data ===============
 
 def get_info(repo, commit):
     outputs = repo.git.diff(commit + '~1',
@@ -77,15 +76,25 @@ def multi_process_get_commit_info(repo, commits):
         p.join()
     return ret
 
+if __name__ == '__main__':
 
-dataset_df = pd.read_csv('../data/Dataset_5000.csv')
-repos = dataset_df.repo.unique()
-dataset_df = reduce_mem_usage(dataset_df)
-path = '../data/commit_info'
-if not os.path.exists(path):
-    os.makedirs(path)
-for reponame in repos:
-    repo = git.Repo('../gitrepo/{}'.format(reponame))
-    commits = dataset_df[dataset_df.repo == reponame].commit.unique()
-    result = multi_process_get_commit_info(repo, commits)
-    savefile(dict(result), path + '/' + reponame + '_commit_info')
+    df = pd.read_csv("/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/drop_diffna.csv")
+    df = reduce_mem_usage(df)
+    msg_savepath = '/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/msg_data.csv'
+    cves_name = df['cve'].tolist()
+    commits = df['commit_id'].tolist()
+    msgs = df['msg'].tolist()
+
+    ###### stop here.
+    
+    dataset_df = pd.read_csv('../data/Dataset_5000.csv')
+    repos = dataset_df.repo.unique()
+    dataset_df = reduce_mem_usage(dataset_df)
+    path = '../data/commit_info'
+    if not os.path.exists(path):
+        os.makedirs(path)
+    for reponame in repos:
+        repo = git.Repo('../gitrepo/{}'.format(reponame))
+        commits = dataset_df[dataset_df.repo == reponame].commit.unique()
+        result = multi_process_get_commit_info(repo, commits)
+        savefile(dict(result), path + '/' + reponame + '_commit_info')
