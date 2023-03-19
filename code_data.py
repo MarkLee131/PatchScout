@@ -40,7 +40,7 @@ if __name__ == '__main__':
     
     df = pd.read_csv("/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/drop_diffna.csv")
     df = reduce_mem_usage(df)
-    savepath = '/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/code_data.csv'
+    code_savepath = '/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/code_data.csv'
     cves = df['cve'].tolist()
     commits = df['commit_id'].tolist()
     diffs = df['diff'].tolist()
@@ -48,4 +48,4 @@ if __name__ == '__main__':
     code_df = pd.DataFrame(
         code_data,
         columns=['cve','commit_id', 'code_files', 'code_filepaths', 'code_funcs'])
-    code_df.to_csv(savepath, index=False)
+    code_df.to_csv(code_savepath, index=False)

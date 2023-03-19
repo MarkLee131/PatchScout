@@ -90,7 +90,7 @@ TO run this script, you need to first obtain the vuln_data.csv.
 Then steps is:
 1. run this script
 2. code_data.py
-3. mess_data.py
+3. msg_data.py
 4. commit_data.py
 '''
 

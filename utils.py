@@ -9,13 +9,10 @@ import seaborn as sns
 import nltk
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
-
 import torch
 
 pd.set_option('display.max_rows',200)
 pd.set_option('display.max_columns',200)
-
-dataset_path = '/home/kaixuan/locating_patch/analyze/VCMatch/data/Dataset_5000.csv'
 
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')

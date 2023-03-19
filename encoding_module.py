@@ -1,16 +1,11 @@
 import seaborn as sns
 import pandas as pd
 import numpy as np
-import pickle
 import os
-import gc
 import time
 import logging
 import git
-import chardet
-
-from util import *
-import random
+from utils import *
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -303,46 +298,6 @@ def get_embedding(model,
     savefile(data2_embedding, outpath + 'commit_embedding_' + note)
 
 
-# def encoding():
-#     df = pd.read_csv('data/Dataset_5000.csv')
-#     if not os.path.exists('data/encode/cve_desc_token.csv'):
-#         cve_desc = pd.read_csv('data/cve_desc.csv',encoding= 'Windows-1252')
-#         cve_unique = df.cve.unique()
-#         in_use = cve_desc['cve'].apply(lambda x: True if x in cve_unique else False)
-#         cve_desc_origin_use = cve_desc[in_use]
-#         cve_desc_origin_use['desc_token'] = cve_desc_origin_use['desc'].apply(lambda x: tokenizer.convert_tokens_to_ids(tokenizer.tokenize(x))[:128])
-#         cve_desc_origin_use.drop('desc', axis = 1, inplace = True)
-#         cve_desc_origin_use.to_csv('data/encode/cve_desc_token.csv', index=False)
-
-#     cve_desc_origin_use = pd.read_csv('data/encode/cve_desc_token.csv')
-#     cve_desc_origin_use['desc_token'] = cve_desc_origin_use['desc_token'].apply(eval)
-
-#     if not os.path.exists('data/encode/commit_mess_token.csv'):
-#         repo_commit = df.drop_duplicates(['repo', 'commit'])
-#         repo_commit = repo_commit[['repo', 'commit']]
-#         repo_commit.to_csv('data/encode/repo_commit.csv', index=False)
-#         for repo in repo_unique:
-#             dic = {}
-#             gitRepo = git.Repo('gitrepo/'+repo)
-#             for commit in gitRepo.iter_commits():
-#                 dic[str(commit)] = commit.message
-#             repo_tmp = repo_commit[repo_commit.repo == repo]
-#             repo_tmp['mess_token'] = repo_tmp['commit'].apply(lambda x: tokenizer.convert_tokens_to_ids(tokenizer.tokenize(dic[x]))[:128])
-#             repo_tmp.to_csv('data/encode/repo_commit_'+repo+'.csv', index=False)
-#         repo_commit_list = []
-#         for repo in repo_unique:
-#             tmp = pd.read_csv('data/encode/repo_commit_{}.csv'.format(repo))
-#             repo_commit_list.append(tmp)
-#             os.remove('data/encode/repo_commit_{}.csv'.format(repo))
-#         repo_commit = pd.concat(repo_commit_list)
-#         repo_commit.to_csv('data/encode/commit_mess_token.csv', index=False)
-
-#     repo_commit = pd.read_csv('data/encode/repo_commit_mess_token.csv')
-#     repo_commit['mess_token'] = repo_commit['mess_token'].apply(eval)
-
-#     df = df.merge(cve_desc_origin_use, how='left', on='cve').merge(repo_commit, how='left', on=['repo', 'commit'])
-
-
 def encoding(train_df, test_df, note):
     trainDatasetPath = '../data/encode/enc_train_' + note
     testDatasetPath = '../data/encode/enc_test_' + note
@@ -352,8 +307,8 @@ def encoding(train_df, test_df, note):
     print("训练encoding module")
     logging.info("训练encoding module")
     # train_enc(trainDatasetPath=trainDatasetPath,testDatasetPath=testDatasetPath)
-    print("对文本进行编码")
-    logging.info("对文本进行编码")
+    print("encoding for text:")
+    logging.info("encoding for text:")
     model = TextModel().to(device)
     model.load_state_dict(torch.load('../data/encode/model_epoch_5_4.ckpt'))
     get_embedding(model, trainDatasetPath, note='train')

@@ -17,10 +17,7 @@ def re_cve(item):
 
 if __name__ == "__main__":
 
-    df = pd.read_csv(dataset_path)
-    df = reduce_mem_usage(df)
-
-    with open("../data/vuln_type_impact.json", 'r') as f:
+    with open("/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/vuln_type_impact.json", 'r') as f:
         vuln_type_impact = json.load(f)
 
     vuln_type = set(vuln_type_impact.keys())
@@ -28,14 +25,14 @@ if __name__ == "__main__":
     for value in vuln_type_impact.values():
         vuln_impact.update(value)
 
-    commit_mess_data = []
-
+    commit_msg_data = []
+    
     df = pd.read_csv("/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/drop_diffna.csv")
     df = reduce_mem_usage(df)
     msg_savepath = '/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/msg_data.csv'
     cves_name = df['cve'].tolist()
     commits = df['commit_id'].tolist()
-    msgs = df['msg'].tolist()
+    msgs = df['commit_msg'].tolist()
 
     msg_len = len(msgs)
 
@@ -55,14 +52,12 @@ if __name__ == "__main__":
         cves = re_cve(msg)
         cve_name = cves_name[i-1]
         commit = commits[i-1]
-        commit_mess_data.append([
+        commit_msg_data.append([
             cve_name, commit, bugs, cves, type_set, impact_set])
 
-    commit_mess_data = pd.DataFrame(commit_mess_data,
+    commit_msg_data = pd.DataFrame(commit_msg_data,
                                     columns=[
-                                        'cve', 'commit', 'mess_bugs', 'mess_cves',
-                                        'mess_type', 'mess_impact'
+                                        'cve', 'commit', 'msg_bugs', 'msg_cves',
+                                        'msg_type', 'msg_impact'
                                     ])
-    commit_mess_data.to_csv(msg_savepath, index=False)
-    
-    ### TODO: test this script for the commit and msg, especially the 'msg' column name.
+    commit_msg_data.to_csv(msg_savepath, index=False)
