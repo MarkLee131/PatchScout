@@ -14,9 +14,7 @@ import torch
 pd.set_option('display.max_rows',200)
 pd.set_option('display.max_columns',200)
 
-
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-
 nltk.download('stopwords')
 
 def savefile(data, path):
@@ -30,7 +28,6 @@ def readfile(path):
     data = pickle.load(f)
     f.close()
     return data
-
 
 
 def reduce_mem_usage(df, verbose=True):
