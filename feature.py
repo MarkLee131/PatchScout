@@ -14,7 +14,7 @@ features_columns = ['cve_match', 'bug_match', # VI
                     'func_same_cnt', 'func_same_ratio', 'func_unrelated_cnt', # VL
                     'file_same_cnt', 'file_same_ratio', 'file_unrelated_cnt', # VL
                     'filepath_same_cnt', 'filepath_same_ratio', 'filepath_unrelated_cnt', # VL
-                    'vuln_type_1', 'vuln_type_2', 'vuln_type_3', 'patchlike',  # VT
+                    'vuln_type_1', 'vuln_type_2', 'vuln_type_3', 'patch_like',  # VT
                     'msg_shared_num', 'msg_shared_ratio', 'msg_max', 'msg_sum', 'msg_mean', 'msg_var', # VDT
                     'code_shared_num', 'code_shared_ratio', 'code_max', 'code_sum', 'code_mean', 'code_var'] # VDT
 
