@@ -74,7 +74,7 @@ def patchScout(X_train, y_train, X_test, y_test):
     lr = 0.001
     num_workers = 10
     batch_size = 10000
-    num_epoches = 10
+    num_epoches = 20
     num_feature = X_train.shape[1]-2
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     model = RankNet(num_feature).to(device)
@@ -213,7 +213,7 @@ if __name__ == '__main__':
     ps_df = pd.read_csv("/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/patchscout_feature.csv")
     cvelist = ps_df.cve.unique()
     
-    kf = KFold(n_splits = 2, shuffle = True)
+    kf = KFold(n_splits = 5, shuffle = True)
 
     ps_cols = ['cve', 'label', 
                 'cve_match', 'bug_match', # VI
