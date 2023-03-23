@@ -71,6 +71,7 @@ if __name__ == '__main__':
     # print([cve, links, cwe])
     
     df1 = pd.read_csv("/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/cve_nvd.csv")
-    df2 = pd.read_csv("/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/vuln_data.csv")
+    df2 = pd.read_csv("/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/vuln_data_without_link.csv") # before is data.csv
     df3 = df2.merge(df1[['cve', 'links']], how='left', on='cve')
-    df3.to_csv("/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/vuln_data-1.csv", index = False)
+    df3.to_csv("/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/vuln_data.csv", index = False)
+    #### 21.03.23

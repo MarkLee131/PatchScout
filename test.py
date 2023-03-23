@@ -2,7 +2,8 @@ import nltk
 import numpy as np
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
-nltk.download('stopwords')
+import pandas as pd
+# nltk.download('stopwords')
 stop_words = set(stopwords.words('english'))
 
 ### nvd_desc: nvd description
@@ -163,30 +164,52 @@ def count_shared_words_dc(nvd_desc, code_diff):
 
 if __name__ == "__main__":
     
-    # a = set()
-    # b = set()
-    # lenth = len(a & b) 
-    # print(lenth)
+    # ps_df = pd.read_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/patchscout_feature_decra.csv')
+    # # msg_df = pd.read_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/msg_data.csv')
+    # msg_sn = pd.read_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/msg_sn.csv')
+    # msg_df = msg_sn[['cve','msg_shared_num']]
+    # merged_df = ps_df.join(msg_df, how='left')
+    # merged_df.to_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/patchscout_feature_msg.csv', index=False)
+    
+    feature_df = pd.read_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/patchscout_feature_msg.csv')
+
+    tmp_df = feature_df[['cve','commit_id','label','cve_match','bug_match','func_same_cnt','func_same_ratio','func_unrelated_cnt','file_same_cnt','file_same_ratio','file_unrelated_cnt','filepath_same_cnt','filepath_same_ratio','filepath_unrelated_cnt','vuln_type_1','vuln_type_2','vuln_type_3', 'patch_like','msg_shared_num','msg_shared_ratio','msg_max','msg_sum','msg_mean','msg_var','code_shared_num','code_shared_ratio','code_max','code_sum','code_mean','code_var']]
+    # # reorder the columns
+    # tmp_df = ps_df[['cve','commit_id','label','cve_match','bug_match','func_same_cnt','func_same_ratio','func_unrelated_cnt','file_same_cnt','file_same_ratio','file_unrelated_cnt','filepath_same_cnt','filepath_same_ratio','filepath_unrelated_cnt','vuln_type_1','vuln_type_2','vuln_type_3','msg_shared_num','msg_shared_ratio','msg_max','msg_sum','msg_mean','msg_var','code_shared_num','code_shared_ratio','code_max','code_sum','code_mean','patch_like']]
+
+    # save the dataframe to a CSV file
+    tmp_df.to_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/patchscout_feature.csv', index=False)
 
     
-    nvd_description = "The vulnerable function uses user-controlled input to construct a file path for access without validating that the input is a valid file path."
-    commit_message = "Fix file path validation in vulnerable function"
-    shared_word_count, share_word_ratio, max_freq, freq_sum, freq_avg, freq_var = count_shared_words_dm(nvd_description, commit_message)
-    print(f"Number of shared words: {shared_word_count}")
-    print(f"Ratio of shared words: {share_word_ratio}")
-    print(f"Max frequency of shared words: {max_freq}")
-    print(f"Sum of frequencies of shared words: {freq_sum}")
-    print(f"Average frequency of shared words: {freq_avg}")
-    print(f"Variance of frequency of shared words: {freq_var}")
+    
+    ## -----------------rename the column 'patchlike' as 'patch_like'-------------------------
+    # ps_df = pd.read_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/patchscout_feature.csv')
+    # new_name = 'patch_like'
+    # ps_df.rename(columns={ ps_df.columns[-1]: new_name }, inplace=True)
+    # # Delete the 'patchlike' column
+    # ps_df.drop(columns=['patchlike'], inplace=True)
+    # # Save the modified DataFrame to a new CSV file
+    # ps_df.to_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/patchscout_feature-1.csv', index=False) #,  header=[col if col != 'patch_like' else 'patch_like' for col in ps_df.columns])
+    ## ---------------------------------------------------------------------------------------
+    
+    # nvd_description = "The vulnerable function uses user-controlled input to construct a file path for access without validating that the input is a valid file path."
+    # commit_message = "Fix file path validation in vulnerable function"
+    # shared_word_count, share_word_ratio, max_freq, freq_sum, freq_avg, freq_var = count_shared_words_dm(nvd_description, commit_message)
+    # print(f"Number of shared words: {shared_word_count}")
+    # print(f"Ratio of shared words: {share_word_ratio}")
+    # print(f"Max frequency of shared words: {max_freq}")
+    # print(f"Sum of frequencies of shared words: {freq_sum}")
+    # print(f"Average frequency of shared words: {freq_avg}")
+    # print(f"Variance of frequency of shared words: {freq_var}")
 
-    print("*"*59)
-    shared_word_count, share_word_ratio, max_freq, freq_sum, freq_avg, freq_var = count_shared_words_dm_eq(nvd_description, commit_message)
-    print(f"Number of shared words: {shared_word_count}")
-    print(f"Ratio of shared words: {share_word_ratio}")
-    print(f"Max frequency of shared words: {max_freq}")
-    print(f"Sum of frequencies of shared words: {freq_sum}")
-    print(f"Average frequency of shared words: {freq_avg}")
-    print(f"Variance of frequency of shared words: {freq_var}")
+    # print("*"*59)
+    # shared_word_count, share_word_ratio, max_freq, freq_sum, freq_avg, freq_var = count_shared_words_dm_eq(nvd_description, commit_message)
+    # print(f"Number of shared words: {shared_word_count}")
+    # print(f"Ratio of shared words: {share_word_ratio}")
+    # print(f"Max frequency of shared words: {max_freq}")
+    # print(f"Sum of frequencies of shared words: {freq_sum}")
+    # print(f"Average frequency of shared words: {freq_avg}")
+    # print(f"Variance of frequency of shared words: {freq_var}")
 
 
     # print("*"*59)

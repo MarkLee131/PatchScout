@@ -15,7 +15,7 @@ pd.set_option('display.max_rows',200)
 pd.set_option('display.max_columns',200)
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-nltk.download('stopwords')
+# nltk.download('stopwords')
 
 def savefile(data, path):
     f = open(path, 'wb')

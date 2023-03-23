@@ -188,8 +188,6 @@ def count_shared_words_dc(nvd_desc, code_diff):
     return len(shared_words), svmw_ratio, max_freq, freq_sum, freq_avg, freq_var
 
 
-
-
 if __name__ == '__main__':
     # cve,commit_id,commit_msg,diff,label
     dataset_df = pd.read_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/drop_diffna.csv')
@@ -208,6 +206,9 @@ if __name__ == '__main__':
     msg_df['msg_type'] = msg_df['msg_type'].apply(eval)
     msg_df['msg_impact'] = msg_df['msg_impact'].apply(eval)
     
+    
+    tmp_df = (dataset_df.merge(msg_df, how='left', on=['cve','commit_id']))
+    
     tmp_df = ((dataset_df.merge(code_df, how='left', on=['cve','commit_id'])).merge(msg_df, how='left', on=['cve','commit_id']))\
         .merge(vuln_df, how='left', on=['cve'])
     # df: cve,commit_id,commit_msg,diff,label
@@ -217,6 +218,7 @@ if __name__ == '__main__':
     # tmp_df: cve,commit_id,commit_msg,diff,label,code_files,code_filepaths,code_funcs,msg_bugs,msg_cves,msg_type,msg_impact
     print(time.strftime("%H:%M:%S"))
     del dataset_df, code_df, msg_df
+    
     gc.collect()
     print(time.strftime("%H:%M:%S"))
     
@@ -227,16 +229,16 @@ if __name__ == '__main__':
 
     vuln_type_impact = json.load(open('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/vuln_type_impact.json'))
 
-    ps_savepath = '/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/patchscout_feature.csv'
+    ps_savepath = '/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/patchscout_feature_bp.csv'
     col_names = ['cve','commit_id','label'] + features_columns
-    print(col_names)
+    # print(col_names)
     ps_df=pd.DataFrame(columns=col_names)
     ps_df.to_csv(ps_savepath, encoding='utf-8', mode='w', index=None)
-
+    
     for i in tqdm.tqdm(range(epoch)):
         df = tmp_df.iloc[i * each_cnt: min((i + 1) * each_cnt, total_cnt)]
 
-        # tmp_df: cve,commit_id,commit_msg,diff,label,code_files,code_filepaths,code_funcs,msg_bugs,msg_cves,msg_type,msg_impact
+        #### tmp_df: cve,commit_id,commit_msg,diff,label,code_files,code_filepaths,code_funcs,msg_bugs,msg_cves,msg_type,msg_impact
         ps_df = pd.DataFrame(columns=col_names)
         ps_df['cve'] = df['cve']
         ps_df['commit_id'] = df['commit_id']
@@ -249,7 +251,7 @@ if __name__ == '__main__':
         ps_df['func_same_cnt'], ps_df['func_same_ratio'], ps_df['func_unrelated_cnt'] = zip(*df.apply(
             lambda row: get_vuln_loc(row['functions'], row['code_funcs']), axis=1))
 
-        ## but file &&&& filepaths ??
+        ## but file &&&& filepaths
         ps_df['file_same_cnt'], ps_df['file_same_ratio'], ps_df['file_unrelated_cnt'] = zip(*df.apply(
             lambda row: get_vuln_loc(row['files'], row['code_files']), axis=1))
         ps_df['filepath_same_cnt'], ps_df['filepath_same_ratio'], ps_df['filepath_unrelated_cnt'] = zip(*df.apply(
@@ -259,23 +261,16 @@ if __name__ == '__main__':
         ps_df['vuln_type_1'], ps_df['vuln_type_2'], ps_df['vuln_type_3'] = zip(*df.apply(
             lambda row: get_vuln_type_relevance(row['vuln_type'], row['vuln_impact'], row['msg_type'], row['msg_impact'], vuln_type_impact), axis=1))
         ps_df['patch_like'] = 0.5
-        # vuln_type, vuln_impact: set()
-        # msg_bugs, msg_cves, msg_type, msg_impact: set()
+        #### vuln_type, vuln_impact: set()
+        #### msg_bugs, msg_cves, msg_type, msg_impact: set()
         
         #### VDT 
+        ## added to update
         ps_df['msg_shared_num'], ps_df['msg_shared_ratio'], ps_df['msg_max'], ps_df['msg_sum'], ps_df['msg_mean'], ps_df['msg_var'] = zip(*df.apply(
             lambda row: count_shared_words_dm(row['description'], row['commit_msg']), axis=1))
         ps_df['code_shared_num'], ps_df['code_shared_ratio'], ps_df['code_max'], ps_df['code_sum'], ps_df['code_mean'], ps_df['code_var'] = zip(*df.apply(
             lambda row: count_shared_words_dc(row['description'], row['diff']), axis=1))
         
-        # cve,commit_id,commit_msg,diff,label,code_files,code_filepaths,code_funcs,msg_bugs,msg_cves,msg_type,msg_impact
+        #### cve,commit_id,commit_msg,diff,label,code_files,code_filepaths,code_funcs,msg_bugs,msg_cves,msg_type,msg_impact
 
-        # df.drop(['diff', 'code_files', 'code_filepaths', 'code_funcs', 'msg_bugs', 'msg_cves', 'msg_type', 'msg_impact', 'description','functions', 'files', 'filepaths', 'vuln_type', 'vuln_impact', 'links'], axis=1, inplace=True)
-        
         ps_df.to_csv(ps_savepath, index=False, mode='a', header=False)
-        # break
-    
-    # ps_df = pd.read_csv(ps_savepath)
-    # ps_df = reduce_mem_usage(ps_df)
-    # ps_df['patchlike'] = 0.5
-    # ps_df.to_csv(ps_savepath, index=False)

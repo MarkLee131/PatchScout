@@ -19,3 +19,6 @@ PatchScout/
 
 ## Usage
 
+## License
+
+The PatchScout is licensed and distributed under the [GNU GPLv3](LICENSE) license. Contact us if your are looking for an exception to the terms.

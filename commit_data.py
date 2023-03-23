@@ -53,7 +53,7 @@ def multi_process_get_commit_info(cve_ids, commit_ids, msgs, diffs, poolnum=5):
 
 if __name__ == '__main__':
 ##### maybe unuseful...
-
+##### 21/03/2023 by Kaixuan
 
     df = pd.read_csv("/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/drop_diffna.csv")
     df = reduce_mem_usage(df)
