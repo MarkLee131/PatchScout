@@ -46,14 +46,14 @@ def create_pair_data(df):
             idx += 1
             len_pair = len(false) if len(false) < 5000 else 5000
             num_tcs.append(len_pair)
-            # if idx % 2 == 0:
-            array_1.extend([np.array(true_item)] * len_pair)
-            array_0.extend(np.array(false)[:len_pair])
-            label.extend([1] * len_pair)
-            # else:
-            #     array_0.extend([np.array(true_item)] * len_pair)
-            #     array_1.extend(np.array(false)[:len_pair])
-            #     label.extend([0] * len_pair)
+            if idx % 2 == 0:
+                array_1.extend([np.array(true_item)] * len_pair)
+                array_0.extend(np.array(false)[:len_pair])
+                label.extend([1] * len_pair)
+            else:
+                array_0.extend([np.array(true_item)] * len_pair)
+                array_1.extend(np.array(false)[:len_pair])
+                label.extend([0] * len_pair)
     return len(array_0), array_0, array_1, label, num_tcs
 
 class PairDataset(Dataset):
@@ -182,15 +182,22 @@ def get_full_score_new(df, suffix, result, start=1, end=10):
 def get_score2(predict, num_tcs:list, N=10):
     length = len(predict)
     total = sum(num_tcs)
+    cnt = len(num_tcs)
     sum_arr = []
     if length != total:
         print('error: predict length is not equal to total')
     num_nozero = [ tc for tc in num_tcs if tc != 0]
     cnt_new = len(num_nozero)
-    for i in range(cnt_new):
-        arr = predict[sum(num_nozero[:i]): sum(num_nozero[:i+1])]
-        sum_arr.append(sum(arr)+1)
-        assert len(arr) == num_nozero[i]
+    for i in range(cnt):
+        if num_tcs[i] == 0:
+            continue
+        if i %2 == 0:
+            arr = predict[sum(num_tcs[:i]): sum(num_tcs[:i+1])]
+            sum_arr.append(sum(arr)+1)
+        else:
+            arr = predict[sum(num_tcs[:i]): sum(num_tcs[:i+1])]
+            sum_arr.append(num_tcs[i] - (sum(arr)+1))
+            assert len(arr) == num_tcs[i]
     arr1 = [item if item <= N else N for item in sum_arr]
     arr2 = [1 if item <= N else 0 for item in sum_arr]
     return np.mean(arr1), sum(arr2) / cnt_new

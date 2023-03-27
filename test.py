@@ -171,14 +171,14 @@ if __name__ == "__main__":
     # merged_df = ps_df.join(msg_df, how='left')
     # merged_df.to_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/patchscout_feature_msg.csv', index=False)
     
-    feature_df = pd.read_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/patchscout_feature_msg.csv')
+    # feature_df = pd.read_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/patchscout_feature_msg.csv')
 
-    tmp_df = feature_df[['cve','commit_id','label','cve_match','bug_match','func_same_cnt','func_same_ratio','func_unrelated_cnt','file_same_cnt','file_same_ratio','file_unrelated_cnt','filepath_same_cnt','filepath_same_ratio','filepath_unrelated_cnt','vuln_type_1','vuln_type_2','vuln_type_3', 'patch_like','msg_shared_num','msg_shared_ratio','msg_max','msg_sum','msg_mean','msg_var','code_shared_num','code_shared_ratio','code_max','code_sum','code_mean','code_var']]
-    # # reorder the columns
-    # tmp_df = ps_df[['cve','commit_id','label','cve_match','bug_match','func_same_cnt','func_same_ratio','func_unrelated_cnt','file_same_cnt','file_same_ratio','file_unrelated_cnt','filepath_same_cnt','filepath_same_ratio','filepath_unrelated_cnt','vuln_type_1','vuln_type_2','vuln_type_3','msg_shared_num','msg_shared_ratio','msg_max','msg_sum','msg_mean','msg_var','code_shared_num','code_shared_ratio','code_max','code_sum','code_mean','patch_like']]
+    # tmp_df = feature_df[['cve','commit_id','label','cve_match','bug_match','func_same_cnt','func_same_ratio','func_unrelated_cnt','file_same_cnt','file_same_ratio','file_unrelated_cnt','filepath_same_cnt','filepath_same_ratio','filepath_unrelated_cnt','vuln_type_1','vuln_type_2','vuln_type_3', 'patch_like','msg_shared_num','msg_shared_ratio','msg_max','msg_sum','msg_mean','msg_var','code_shared_num','code_shared_ratio','code_max','code_sum','code_mean','code_var']]
+    # # # reorder the columns
+    # # tmp_df = ps_df[['cve','commit_id','label','cve_match','bug_match','func_same_cnt','func_same_ratio','func_unrelated_cnt','file_same_cnt','file_same_ratio','file_unrelated_cnt','filepath_same_cnt','filepath_same_ratio','filepath_unrelated_cnt','vuln_type_1','vuln_type_2','vuln_type_3','msg_shared_num','msg_shared_ratio','msg_max','msg_sum','msg_mean','msg_var','code_shared_num','code_shared_ratio','code_max','code_sum','code_mean','patch_like']]
 
-    # save the dataframe to a CSV file
-    tmp_df.to_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/patchscout_feature.csv', index=False)
+    # # save the dataframe to a CSV file
+    # tmp_df.to_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/patchscout_feature.csv', index=False)
 
     
     
@@ -249,3 +249,22 @@ if __name__ == "__main__":
     # print(f"Code var: {code_var}")
 
 
+    df = pd.read_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/patchscout_feature.csv')
+    cnt = 0
+    cve_list = []
+    for cve, tmp_df in df.groupby(['cve']):
+        true = tmp_df[tmp_df['label'] == 1]
+        false = tmp_df[tmp_df['label'] == 0]
+        # true = true.drop(columns = ['cve', 'label'])
+        # false = false.drop(columns = ['cve', 'label'])
+        len_pair = len(false) if len(false) < 5000 else 5000
+        if len_pair == 0:
+                cnt += 1
+                cve_list.append(cve)
+    
+    print(len(cve_list))
+    print(len(set(cve_list))) 
+    print(cve_list)         
+    print(cnt)
+    tmp_df = pd.DataFrame(cve_list, columns=['cve'])
+    tmp_df.to_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/cve_list_todo.csv', index=False)
