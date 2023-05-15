@@ -118,7 +118,7 @@ def patchScout(X_train, y_train, X_test, y_test):
 
         print('Epoch [{}/{}], Time {}s, Loss: {:.4f}, Lr:{:.4f}'.format(epoch + 1, num_epoches, int(t2 - t1), loss.item(), lr))
         torch.save(model.state_dict(),
-                   '/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/model_data/ps_20_{:02}.ckpt'.format(epoch))
+                   '/home/kaixuan/locating_patch/analyze/PatchScout/data/model_data/ps_20_{:02}.ckpt'.format(epoch))
 
     model.eval()
     predict = []
@@ -217,7 +217,7 @@ def get_full_score2(predict, suffix, result, num_tcs, start=1, end=10):
     return result
 
 if __name__ == '__main__':
-    ps_df = pd.read_csv("/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/patchscout_feature.csv")
+    ps_df = pd.read_csv("/home/kaixuan/locating_patch/analyze/PatchScout/data/patchscout_feature_total.csv")
     cvelist = ps_df.cve.unique()
     
     kf = KFold(n_splits = 5, shuffle = True)
@@ -258,4 +258,4 @@ if __name__ == '__main__':
     result = pd.DataFrame()
     result = get_full_score2(patchScout_predict, 'ps', result, num_tcs)
     # result = get_full_score_new(result_feature, 'ps', result)
-    result.to_csv("/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/metric_result.csv", index=False)
+    result.to_csv("/home/kaixuan/locating_patch/analyze/PatchScout/data/metric_result.csv", index=False)

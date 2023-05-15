@@ -3,7 +3,10 @@ import numpy as np
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 import pandas as pd
+from feature import get_diff_content, process_diff
+
 # nltk.download('stopwords')
+nltk.download('punkt')
 stop_words = set(stopwords.words('english'))
 
 ### nvd_desc: nvd description
@@ -113,18 +116,14 @@ def count_shared_words_dc_eq(nvd_desc, code_diff):
     code_var = np.var(code_diff_values)
     return code_shared_num, code_shared_ratio, code_max, code_sum, code_mean, code_var
 
-
 def count_shared_words_dc(nvd_desc, code_diff):
-    # Tokenize the strings into words
-    nvd_desc_tokens = nltk.word_tokenize(nvd_desc.lower())
-    code_diff_tokens = nltk.word_tokenize(code_diff.lower())
-
-    # Filter out stopwords from the tokens
-    nvd_desc_tokens = [word for word in nvd_desc_tokens if word not in stop_words]
-    code_diff_tokens = [word for word in code_diff_tokens if word not in stop_words]
-
-    # Get the shared words between the two tokenized strings
-    shared_words = set(nvd_desc_tokens).intersection(set(code_diff_tokens))
+    nvd_desc_tokens = word_tokenize(nvd_desc.lower())
+    nvd_desc_tokens = [token for token in nvd_desc_tokens if token not in stop_words]
+    
+    code_diff_tokens = process_diff(code_diff)
+    # code_diff_tokens = [token for token in code_diff_tokens if token not in stop_words]
+    
+    shared_words = set(nvd_desc_tokens) & set(code_diff_tokens)
 
     # Compute the frequency of each shared word in both tokenized strings
     nvd_desc_counts = {}
@@ -136,25 +135,21 @@ def count_shared_words_dc(nvd_desc, code_diff):
     # Calculate the number of words in nvd description
     num_words_nvd_desc = len(nvd_desc_tokens)
     
-
     # Calculate the Shared-Vul-Msg-Word Ratio
     svmw_ratio = len(shared_words) / (num_words_nvd_desc + 1)
 
     # Calculate the maximum frequency of the shared words
-    max_freq = max(list(nvd_desc_counts.values()) + list(code_diff_counts.values()))
+    max_freq = max(list(nvd_desc_counts.values()) + list(code_diff_counts.values()), default=0)
 
 
     # Calculate the sum of the frequencies of the shared words
-    freq_sum = sum(list(nvd_desc_counts.values())) + sum(list(code_diff_counts.values()))
+    freq_sum = sum(list(nvd_desc_counts.values())) + sum(list(code_diff_counts.values())) if len(shared_words) > 0 else 0
 
     # Calculate the average frequency of the shared words
-    freq_avg = freq_sum / (len(nvd_desc_counts) + len(code_diff_counts))
+    freq_avg = freq_sum / (len(nvd_desc_counts) + len(code_diff_counts) + 1)
 
     # Calculate the variance of the frequency of the shared words
-    freq_var = sum([((nvd_desc_counts.get(word, 0) - freq_avg) ** 2) +
-                    ((code_diff_counts.get(word, 0) - freq_avg) ** 2)
-                   for word in shared_words]) / (len(nvd_desc_counts) + len(code_diff_counts))
-
+    freq_var = np.var(list(nvd_desc_counts.values()) + list(code_diff_counts.values())) if len(shared_words) > 0 else 0
     # Return the computed statistics
     return len(shared_words), svmw_ratio, max_freq, freq_sum, freq_avg, freq_var
 
@@ -249,22 +244,34 @@ if __name__ == "__main__":
     # print(f"Code var: {code_var}")
 
 
-    df = pd.read_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/patchscout_feature.csv')
-    cnt = 0
-    cve_list = []
-    for cve, tmp_df in df.groupby(['cve']):
-        true = tmp_df[tmp_df['label'] == 1]
-        false = tmp_df[tmp_df['label'] == 0]
-        # true = true.drop(columns = ['cve', 'label'])
-        # false = false.drop(columns = ['cve', 'label'])
-        len_pair = len(false) if len(false) < 5000 else 5000
-        if len_pair == 0:
-                cnt += 1
-                cve_list.append(cve)
+    # df = pd.read_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/patchscout_feature.csv')
+    # cnt = 0
+    # cve_list = []
+    # for cve, tmp_df in df.groupby(['cve']):
+    #     true = tmp_df[tmp_df['label'] == 1]
+    #     false = tmp_df[tmp_df['label'] == 0]
+    #     # true = true.drop(columns = ['cve', 'label'])
+    #     # false = false.drop(columns = ['cve', 'label'])
+    #     len_pair = len(false) if len(false) < 5000 else 5000
+    #     if len_pair == 0:
+    #             cnt += 1
+    #             cve_list.append(cve)
     
-    print(len(cve_list))
-    print(len(set(cve_list))) 
-    print(cve_list)         
-    print(cnt)
-    tmp_df = pd.DataFrame(cve_list, columns=['cve'])
-    tmp_df.to_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/cve_list_todo.csv', index=False)
+    # print(len(cve_list))
+    # print(len(set(cve_list))) 
+    # print(cve_list)         
+    # print(cnt)
+    # tmp_df = pd.DataFrame(cve_list, columns=['cve'])
+    # tmp_df.to_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/cve_list_todo.csv', index=False)
+    
+    cve = 'CVE-2015-5232'
+    commit_id = 'c5759e7b76f5bf844be6c6641cc1b356bbc83869'
+    commit_id_1 = '931e02b6e05042fa051d077ae15ae13ad808857a'
+    label_1 = 0
+    label = 1
+    code_diff = get_diff_content(cve, commit_id, label)
+    print(code_diff)
+    print('-'*59)
+    nvd_desc = "This is a description of a vulnerability, int sm_skip_attr_write"
+    code_shared_num, code_shared_ratio, code_max, code_sum, code_mean, code_var = count_shared_words_dc(nvd_desc, code_diff)
+    print(f"Code shared num: {code_shared_num}, Code shared ratio: {code_shared_ratio}, Code max: {code_max}, Code sum: {code_sum}, Code mean: {code_mean}, Code var: {code_var}")

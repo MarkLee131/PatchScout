@@ -17,6 +17,26 @@ PatchScout/
 └── vuln_type_impact.json
 ```
 
+```bash
+PatchScout/
+├── code_data.py
+├── collect_data.py: collcect data for training and testing (first used)
+├── commit_data.py
+├── encoding_module.py
+├── feature_msg.py
+├── feature.py
+├── LICENSE
+├── msg_data.py
+├── patchscout.py
+├── process_data.py
+├── README.md
+├── test.py
+└── utils.py
+```
+
+
+
+
 ## Usage
 
 ## License
