@@ -8,6 +8,7 @@ import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
 import torch.optim as optim
+import gc
 
 import warnings
 warnings.filterwarnings('ignore')
@@ -40,11 +41,14 @@ def create_pair_data(df):
     for cve, tmp_df in df.groupby(['cve']):
         true = tmp_df[tmp_df['label'] == 1]
         false = tmp_df[tmp_df['label'] == 0]
-        true = true.drop(columns = ['cve', 'label'])
-        false = false.drop(columns = ['cve', 'label'])
+        # true = true.drop(columns = ['cve', 'label'])
+        # false = false.drop(columns = ['cve', 'label'])
+        true = true.drop(columns = ['label'])
+        false = false.drop(columns = ['label'])
         for _, true_item in true.iterrows():
             idx += 1
             len_pair = len(false) if len(false) < 5000 else 5000
+            print(idx, cve, len_pair)
             num_tcs.append(len_pair)
             if idx % 2 == 0:
                 array_1.extend([np.array(true_item)] * len_pair)
@@ -71,12 +75,12 @@ class PairDataset(Dataset):
         return data1, data2, label
 
 def patchScout(X_train, y_train, X_test, y_test):
-    lr = 0.001
+    lr = 0.0001
     num_workers = 10
-    batch_size = 10000
+    batch_size = 8192
     num_epoches = 20
     num_feature = X_train.shape[1]-2
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    device = torch.device('cuda:1' if torch.cuda.is_available() else 'cpu')
     model = RankNet(num_feature).to(device)
     criterion = nn.BCELoss()
     optimizer = optim.Adam(model.parameters(), lr=lr)
@@ -98,6 +102,8 @@ def patchScout(X_train, y_train, X_test, y_test):
                                  pin_memory=False)
 
     print("ps training & predicting")
+    # print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
+    print(time.strftime("%H:%M:%S"))
     for epoch in range(num_epoches):
         model.train()
         t1 = time.time()
@@ -106,7 +112,7 @@ def patchScout(X_train, y_train, X_test, y_test):
             data2 = data2.to(device)
             label = label.to(device)
             pred = model(data1, data2)
-            label_size = data1.size()[0]
+            # label_size = data1.size()[0]
             loss = criterion(pred, label.unsqueeze(1).float())
             optimizer.zero_grad()
             loss.backward()
@@ -116,9 +122,9 @@ def patchScout(X_train, y_train, X_test, y_test):
             label = label.cpu().detach().numpy()
         t2 = time.time()
 
-        print('Epoch [{}/{}], Time {}s, Loss: {:.4f}, Lr:{:.4f}'.format(epoch + 1, num_epoches, int(t2 - t1), loss.item(), lr))
+        print('Epoch [{}/{}], Time {}s, Loss: {:.10f}, Lr:{:.4f}'.format(epoch + 1, num_epoches, int(t2 - t1), loss.item(), lr))
         torch.save(model.state_dict(),
-                   '/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/model_data/ps_20_{:02}.ckpt'.format(epoch))
+                   '/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/psbert_data/ps_20_{:02}.ckpt'.format(epoch))
 
     model.eval()
     predict = []
@@ -217,8 +223,14 @@ def get_full_score2(predict, suffix, result, num_tcs, start=1, end=10):
     return result
 
 if __name__ == '__main__':
-    ps_df = pd.read_csv("/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/patchscout_feature.csv")
-    cvelist = ps_df.cve.unique()
+    patch_ps_df = pd.read_csv("/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/patchscout_feature_patch.csv")
+    nonpatch_ps_df = pd.read_csv("/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/patchscout_feature_nonpatch.csv")
+    reduce_mem_usage(nonpatch_ps_df)
+    cvelist = patch_ps_df.cve.unique()
+    ps_df = pd.concat([patch_ps_df, nonpatch_ps_df], axis=0)
+    reduce_mem_usage(ps_df)
+    del patch_ps_df, nonpatch_ps_df
+    gc.collect()
     
     kf = KFold(n_splits = 5, shuffle = True)
 
@@ -231,8 +243,8 @@ if __name__ == '__main__':
                 'msg_shared_num', 'msg_shared_ratio', 'msg_max', 'msg_sum', 'msg_mean', 'msg_var', # VDT
                 'code_shared_num', 'code_shared_ratio', 'code_max', 'code_sum', 'code_mean', 'code_var'] # VDT
 
-    result_feature = ps_df[['cve', 'commit_id', 'label']]
-    result_feature.loc[:, 'prob_ps'] = 0
+    # result_feature = ps_df[['cve', 'commit_id', 'label']]
+    # result_feature.loc[:, 'prob_ps'] = 0
     
     for idx, (train_index, test_index) in enumerate(kf.split(cvelist)):
         cve_train = cvelist[train_index]
@@ -245,16 +257,18 @@ if __name__ == '__main__':
         y_test = test['label']
         # patchscout
         patchScout_predict, num_tcs = patchScout(X_train, y_train, X_test, y_test)
+        ## we only need to use the first fold.
+        break
         
         
-        # save result
+        ## save result
         # print("Length of X_test.index:", len(X_test.index))
         # print("Length of patchScout_predict:", len(patchScout_predict))
         # result_feature.loc[X_test.index, 'prob_ps'] = patchScout_predict
     # result_feature['rank_ps'] = get_rank(result_feature, ['prob_ps'])
     # result_feature.to_csv("/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/result_feature.csv", index=False)
-    # save metric result
     
+    # save metric result
     result = pd.DataFrame()
     result = get_full_score2(patchScout_predict, 'ps', result, num_tcs)
     # result = get_full_score_new(result_feature, 'ps', result)
