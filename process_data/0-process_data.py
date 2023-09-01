@@ -6,10 +6,8 @@ import string
 import json
 import pandas as pd
 from nltk.corpus import stopwords
-from utils import *
+# from utils import *
 warnings.filterwarnings("ignore")
-
-# dataset_path = '/home/kaixuan/locating_patch/analyze/VCMatch/data/Dataset_5000.csv'
 
 stopword_list = stopwords.words('english') + list(string.punctuation)
 
@@ -61,8 +59,8 @@ def get_tokens(text, List):
 
 
 if __name__ == '__main__':
-    
-    with open("/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/vuln_type_impact.json", 'r') as f:
+    ### 03.30
+    with open("/home/kaixuan/locating_patch/analyze/PatchScout/data/vuln_type_impact.json", 'r') as f:
         vuln_type_impact = json.load(f)
     
     vuln_type = set(vuln_type_impact.keys())
@@ -70,20 +68,19 @@ if __name__ == '__main__':
     for value in vuln_type_impact.values():
         vuln_impact.update(value)
 
-    df = pd.read_csv("/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/cve_info.csv")
-    #### TODO: need to process this
-    # cve, description
+    df = pd.read_csv("/home/kaixuan/locating_patch/analyze/total_data/cve_info/cve_desc.csv")
+    # cve, cvedesc
     
     
-    df['functions'] = df['description'].apply(re_func)
-    df['files'] = df['description'].apply(re_file)
-    df['filepaths'] = df['description'].apply(re_filepath)
-    df['vuln_type'] = df['description'].apply(lambda item: get_tokens(item, vuln_type))
-    df['vuln_impact'] = df['description'].apply(lambda item: get_tokens(item, vuln_impact))
-    df.drop(['owner','repo'], axis=1, inplace=True)
-    df.to_csv("/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/vuln_data.csv", index=False)
+    df['functions'] = df['cvedesc'].apply(re_func)
+    df['files'] = df['cvedesc'].apply(re_file)
+    df['filepaths'] = df['cvedesc'].apply(re_filepath)
+    df['vuln_type'] = df['cvedesc'].apply(lambda item: get_tokens(item, vuln_type))
+    df['vuln_impact'] = df['cvedesc'].apply(lambda item: get_tokens(item, vuln_impact))
+    # df.drop(['owner','repo'], axis=1, inplace=True)
+    df.to_csv("/home/kaixuan/locating_patch/analyze/total_data/cve_info/vuln_data.csv", index=False)
     print("Done for saving vuln_data.csv.")
-    # cve,description, functions,files,filepaths,vuln_type,vuln_impact
+    # cve,cvedesc, functions,files,filepaths,vuln_type,vuln_impact
 
 '''
 TO run this script, you need to first obtain the vuln_data.csv.

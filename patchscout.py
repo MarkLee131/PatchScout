@@ -272,4 +272,4 @@ if __name__ == '__main__':
     result = pd.DataFrame()
     result = get_full_score2(patchScout_predict, 'ps', result, num_tcs)
     # result = get_full_score_new(result_feature, 'ps', result)
-    result.to_csv("/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/metric_result.csv", index=False)
+    result.to_csv("/home/kaixuan/locating_patch/analyze/PatchScout/data/metric_result.csv", index=False)
