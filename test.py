@@ -158,111 +158,112 @@ def count_shared_words_dc(nvd_desc, code_diff):
 
 
 if __name__ == "__main__":
+    ##############################################################################
+    ps_df = pd.read_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/patchscout_feature_decra.csv')
+    # msg_df = pd.read_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/msg_data.csv')
+    msg_sn = pd.read_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/msg_sn.csv')
+    msg_df = msg_sn[['cve','msg_shared_num']]
+    merged_df = ps_df.join(msg_df, how='left')
+    merged_df.to_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/patchscout_feature_msg.csv', index=False)
     
-    # ps_df = pd.read_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/patchscout_feature_decra.csv')
-    # # msg_df = pd.read_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/msg_data.csv')
-    # msg_sn = pd.read_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/msg_sn.csv')
-    # msg_df = msg_sn[['cve','msg_shared_num']]
-    # merged_df = ps_df.join(msg_df, how='left')
-    # merged_df.to_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/patchscout_feature_msg.csv', index=False)
-    
-    # feature_df = pd.read_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/patchscout_feature_msg.csv')
+    feature_df = pd.read_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/patchscout_feature_msg.csv')
 
-    # tmp_df = feature_df[['cve','commit_id','label','cve_match','bug_match','func_same_cnt','func_same_ratio','func_unrelated_cnt','file_same_cnt','file_same_ratio','file_unrelated_cnt','filepath_same_cnt','filepath_same_ratio','filepath_unrelated_cnt','vuln_type_1','vuln_type_2','vuln_type_3', 'patch_like','msg_shared_num','msg_shared_ratio','msg_max','msg_sum','msg_mean','msg_var','code_shared_num','code_shared_ratio','code_max','code_sum','code_mean','code_var']]
-    # # # reorder the columns
-    # # tmp_df = ps_df[['cve','commit_id','label','cve_match','bug_match','func_same_cnt','func_same_ratio','func_unrelated_cnt','file_same_cnt','file_same_ratio','file_unrelated_cnt','filepath_same_cnt','filepath_same_ratio','filepath_unrelated_cnt','vuln_type_1','vuln_type_2','vuln_type_3','msg_shared_num','msg_shared_ratio','msg_max','msg_sum','msg_mean','msg_var','code_shared_num','code_shared_ratio','code_max','code_sum','code_mean','patch_like']]
+    tmp_df = feature_df[['cve','commit_id','label','cve_match','bug_match','func_same_cnt','func_same_ratio','func_unrelated_cnt','file_same_cnt','file_same_ratio','file_unrelated_cnt','filepath_same_cnt','filepath_same_ratio','filepath_unrelated_cnt','vuln_type_1','vuln_type_2','vuln_type_3', 'patch_like','msg_shared_num','msg_shared_ratio','msg_max','msg_sum','msg_mean','msg_var','code_shared_num','code_shared_ratio','code_max','code_sum','code_mean','code_var']]
+    # # reorder the columns
+    # tmp_df = ps_df[['cve','commit_id','label','cve_match','bug_match','func_same_cnt','func_same_ratio','func_unrelated_cnt','file_same_cnt','file_same_ratio','file_unrelated_cnt','filepath_same_cnt','filepath_same_ratio','filepath_unrelated_cnt','vuln_type_1','vuln_type_2','vuln_type_3','msg_shared_num','msg_shared_ratio','msg_max','msg_sum','msg_mean','msg_var','code_shared_num','code_shared_ratio','code_max','code_sum','code_mean','patch_like']]
 
-    # # save the dataframe to a CSV file
-    # tmp_df.to_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/patchscout_feature.csv', index=False)
+    # save the dataframe to a CSV file
+    tmp_df.to_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/patchscout_feature.csv', index=False)
 
     
     
-    ## -----------------rename the column 'patchlike' as 'patch_like'-------------------------
-    # ps_df = pd.read_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/patchscout_feature.csv')
-    # new_name = 'patch_like'
-    # ps_df.rename(columns={ ps_df.columns[-1]: new_name }, inplace=True)
-    # # Delete the 'patchlike' column
-    # ps_df.drop(columns=['patchlike'], inplace=True)
-    # # Save the modified DataFrame to a new CSV file
-    # ps_df.to_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/patchscout_feature-1.csv', index=False) #,  header=[col if col != 'patch_like' else 'patch_like' for col in ps_df.columns])
-    ## ---------------------------------------------------------------------------------------
+    # -----------------rename the column 'patchlike' as 'patch_like'-------------------------
+    ps_df = pd.read_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/patchscout_feature.csv')
+    new_name = 'patch_like'
+    ps_df.rename(columns={ ps_df.columns[-1]: new_name }, inplace=True)
+    # Delete the 'patchlike' column
+    ps_df.drop(columns=['patchlike'], inplace=True)
+    # Save the modified DataFrame to a new CSV file
+    ps_df.to_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/patchscout_feature-1.csv', index=False) #,  header=[col if col != 'patch_like' else 'patch_like' for col in ps_df.columns])
+    # ---------------------------------------------------------------------------------------
     
-    # nvd_description = "The vulnerable function uses user-controlled input to construct a file path for access without validating that the input is a valid file path."
-    # commit_message = "Fix file path validation in vulnerable function"
-    # shared_word_count, share_word_ratio, max_freq, freq_sum, freq_avg, freq_var = count_shared_words_dm(nvd_description, commit_message)
-    # print(f"Number of shared words: {shared_word_count}")
-    # print(f"Ratio of shared words: {share_word_ratio}")
-    # print(f"Max frequency of shared words: {max_freq}")
-    # print(f"Sum of frequencies of shared words: {freq_sum}")
-    # print(f"Average frequency of shared words: {freq_avg}")
-    # print(f"Variance of frequency of shared words: {freq_var}")
+    nvd_description = "The vulnerable function uses user-controlled input to construct a file path for access without validating that the input is a valid file path."
+    commit_message = "Fix file path validation in vulnerable function"
+    shared_word_count, share_word_ratio, max_freq, freq_sum, freq_avg, freq_var = count_shared_words_dm(nvd_description, commit_message)
+    print(f"Number of shared words: {shared_word_count}")
+    print(f"Ratio of shared words: {share_word_ratio}")
+    print(f"Max frequency of shared words: {max_freq}")
+    print(f"Sum of frequencies of shared words: {freq_sum}")
+    print(f"Average frequency of shared words: {freq_avg}")
+    print(f"Variance of frequency of shared words: {freq_var}")
 
-    # print("*"*59)
-    # shared_word_count, share_word_ratio, max_freq, freq_sum, freq_avg, freq_var = count_shared_words_dm_eq(nvd_description, commit_message)
-    # print(f"Number of shared words: {shared_word_count}")
-    # print(f"Ratio of shared words: {share_word_ratio}")
-    # print(f"Max frequency of shared words: {max_freq}")
-    # print(f"Sum of frequencies of shared words: {freq_sum}")
-    # print(f"Average frequency of shared words: {freq_avg}")
-    # print(f"Variance of frequency of shared words: {freq_var}")
-
-
-    # print("*"*59)
-    # code_diff = "+This is a line of added code\n-This is a line of deleted code\n+This is another line of added code for fix vulnerability\n"
-    # nvd_desc = "This is a description of a vulnerability"
-    # code_shared_num, code_shared_ratio, code_max, code_sum, code_mean, code_var = count_shared_words_dc(nvd_desc, code_diff)
-    # print(f"Code shared num: {code_shared_num}")
-    # print(f"Code shared ratio: {code_shared_ratio}")
-    # print(f"Code max: {code_max}")
-    # print(f"Code sum: {code_sum}")
-    # print(f"Code mean: {code_mean}")
-    # print(f"Code var: {code_var}")
+    print("*"*59)
+    shared_word_count, share_word_ratio, max_freq, freq_sum, freq_avg, freq_var = count_shared_words_dm_eq(nvd_description, commit_message)
+    print(f"Number of shared words: {shared_word_count}")
+    print(f"Ratio of shared words: {share_word_ratio}")
+    print(f"Max frequency of shared words: {max_freq}")
+    print(f"Sum of frequencies of shared words: {freq_sum}")
+    print(f"Average frequency of shared words: {freq_avg}")
+    print(f"Variance of frequency of shared words: {freq_var}")
 
 
-
-    # print("*"*59)
-    # code_diff = "+This is a line of added code\n-This is a line of deleted code\n+This is another line of added code for fix vulnerability\n"
-    # nvd_desc = "This is a description of a vulnerability"
-    # code_shared_num, code_shared_ratio, code_max, code_sum, code_mean, code_var = count_shared_words_dc_eq(nvd_desc, code_diff)
-    # print(f"Code shared num: {code_shared_num}")
-    # print(f"Code shared ratio: {code_shared_ratio}")
-    # print(f"Code max: {code_max}")
-    # print(f"Code sum: {code_sum}")
-    # print(f"Code mean: {code_mean}")
-    # print(f"Code var: {code_var}")
-
-
-    # print("*"*59)
-    # code_diff = "+This is a line of added code\n-This is a line of deleted code\n+This is another line of added code for fix vulnerability\n"
-    # nvd_desc = "This is a description of a vulnerability"
-    # code_shared_num, code_shared_ratio, code_max, code_sum, code_mean, code_var = count_shared_words_counter_eq(nvd_desc, code_diff)
-    # print(f"Code shared num: {code_shared_num}")
-    # print(f"Code shared ratio: {code_shared_ratio}")
-    # print(f"Code max: {code_max}")
-    # print(f"Code sum: {code_sum}")
-    # print(f"Code mean: {code_mean}")
-    # print(f"Code var: {code_var}")
+    print("*"*59)
+    code_diff = "+This is a line of added code\n-This is a line of deleted code\n+This is another line of added code for fix vulnerability\n"
+    nvd_desc = "This is a description of a vulnerability"
+    code_shared_num, code_shared_ratio, code_max, code_sum, code_mean, code_var = count_shared_words_dc(nvd_desc, code_diff)
+    print(f"Code shared num: {code_shared_num}")
+    print(f"Code shared ratio: {code_shared_ratio}")
+    print(f"Code max: {code_max}")
+    print(f"Code sum: {code_sum}")
+    print(f"Code mean: {code_mean}")
+    print(f"Code var: {code_var}")
 
 
-    # df = pd.read_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/patchscout_feature.csv')
-    # cnt = 0
-    # cve_list = []
-    # for cve, tmp_df in df.groupby(['cve']):
-    #     true = tmp_df[tmp_df['label'] == 1]
-    #     false = tmp_df[tmp_df['label'] == 0]
-    #     # true = true.drop(columns = ['cve', 'label'])
-    #     # false = false.drop(columns = ['cve', 'label'])
-    #     len_pair = len(false) if len(false) < 5000 else 5000
-    #     if len_pair == 0:
-    #             cnt += 1
-    #             cve_list.append(cve)
+
+    print("*"*59)
+    code_diff = "+This is a line of added code\n-This is a line of deleted code\n+This is another line of added code for fix vulnerability\n"
+    nvd_desc = "This is a description of a vulnerability"
+    code_shared_num, code_shared_ratio, code_max, code_sum, code_mean, code_var = count_shared_words_dc_eq(nvd_desc, code_diff)
+    print(f"Code shared num: {code_shared_num}")
+    print(f"Code shared ratio: {code_shared_ratio}")
+    print(f"Code max: {code_max}")
+    print(f"Code sum: {code_sum}")
+    print(f"Code mean: {code_mean}")
+    print(f"Code var: {code_var}")
+
+
+    print("*"*59)
+    code_diff = "+This is a line of added code\n-This is a line of deleted code\n+This is another line of added code for fix vulnerability\n"
+    nvd_desc = "This is a description of a vulnerability"
+    code_shared_num, code_shared_ratio, code_max, code_sum, code_mean, code_var = count_shared_words_counter_eq(nvd_desc, code_diff)
+    print(f"Code shared num: {code_shared_num}")
+    print(f"Code shared ratio: {code_shared_ratio}")
+    print(f"Code max: {code_max}")
+    print(f"Code sum: {code_sum}")
+    print(f"Code mean: {code_mean}")
+    print(f"Code var: {code_var}")
+
+
+    df = pd.read_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/csv_data/patchscout_feature.csv')
+    cnt = 0
+    cve_list = []
+    for cve, tmp_df in df.groupby(['cve']):
+        true = tmp_df[tmp_df['label'] == 1]
+        false = tmp_df[tmp_df['label'] == 0]
+        # true = true.drop(columns = ['cve', 'label'])
+        # false = false.drop(columns = ['cve', 'label'])
+        len_pair = len(false) if len(false) < 5000 else 5000
+        if len_pair == 0:
+                cnt += 1
+                cve_list.append(cve)
     
-    # print(len(cve_list))
-    # print(len(set(cve_list))) 
-    # print(cve_list)         
-    # print(cnt)
-    # tmp_df = pd.DataFrame(cve_list, columns=['cve'])
-    # tmp_df.to_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/cve_list_todo.csv', index=False)
+    print(len(cve_list))
+    print(len(set(cve_list))) 
+    print(cve_list)         
+    print(cnt)
+    tmp_df = pd.DataFrame(cve_list, columns=['cve'])
+    tmp_df.to_csv('/home/kaixuan_cuda11/patch_match/analyze/PatchScout/data/cve_list_todo.csv', index=False)
+    #### dprecated ##################################################################################################
     
     cve = 'CVE-2015-5232'
     commit_id = 'c5759e7b76f5bf844be6c6641cc1b356bbc83869'
