@@ -2,6 +2,25 @@
 
 Reproduce the baseline named PatchScout which is a model published on CCS'21.
 
+---
+
+Note: This is a part of our research [PatchFinder](https://github.com/MarkLee131/PatchFinder), published at ISSTA 2024.
+
+## PatchFinder [![arXiv](https://img.shields.io/badge/arXiv-<2407.17065>-<COLOR>.svg)](https://arxiv.org/abs/2407.17065) [![Visit Our Website](https://img.shields.io/badge/Google_Site-_PatchFinder-blue)](https://sites.google.com/view/issta2024-patchfinder/home) ![](https://img.shields.io/badge/CCF-A-red?style=flat-square) [![](https://img.shields.io/badge/ISSTA-2024-blue?style=flat-square)](https://2024.issta.org/)
+
+## Cite us
+
+### BibTeX
+
+```
+@inproceedings{li2024patchfinder,
+  title={PatchFinder: A Two-Phase Approach to Security Patch Tracing for Disclosed Vulnerabilities in Open Source Software},
+  author={Li, Kaixuan and Zhang, Jian and Chen, Sen and Liu, Han and Liu, Yang and Chen, Yixiang},
+  booktitle={Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis},
+  year={2024}
+}
+```
+
 ## Structure
 
 ```
