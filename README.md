@@ -2,14 +2,17 @@
 
 Reproduce the baseline named PatchScout which is a model published on CCS'21.
 
+Their publication: [Locating the Security Patches for Disclosed OSS Vulnerabilities with Vulnerability-Commit Correlation Ranking](https://dl.acm.org/doi/10.1145/3460120.3484593#)
+
+
 ---
 
-Note: This is a part of our research [PatchFinder](https://github.com/MarkLee131/PatchFinder), published at ISSTA 2024.
+Note: This repository is a part of our research [PatchFinder](https://github.com/MarkLee131/PatchFinder), published at ISSTA 2024. 
 
 ## PatchFinder [![arXiv](https://img.shields.io/badge/arXiv-<2407.17065>-<COLOR>.svg)](https://arxiv.org/abs/2407.17065) [![Visit Our Website](https://img.shields.io/badge/Google_Site-_PatchFinder-blue)](https://sites.google.com/view/issta2024-patchfinder/home) ![](https://img.shields.io/badge/CCF-A-red?style=flat-square) [![](https://img.shields.io/badge/ISSTA-2024-blue?style=flat-square)](https://2024.issta.org/)
 
 ## Cite us
-
+Please cite us if this repository helps. :)
 ### BibTeX
 
 ```
